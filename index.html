@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./CSS/main.d.l.css">
     <link rel="icon" href="./CSS/small.ico">
     <script>
-        var random,aup,aup1,aup2;
+        var random,aup,aup_history= [0,0,0,0,0,0,0],aup2;
         function randomNum(minNum,maxNum){ 
             switch(arguments.length){ 
                 case 1: 
@@ -20,17 +20,19 @@
                     default: 
                         return 0; 
                     break; 
-            } 
+            }
         }
         function for_()
         {
             random= randomNum(1,60);
-            if (random>=1&&random<10) {
-                aup="请学号为"+' '+random+'\u0020'+"号的同学起立";
-            }
-            else if (random>=10&&random<100) {
-                aup="请学号为"+'\u0020'+random+'\u0020'+"号的同学起立";
-            }
+            aup_history[6]=randomNum(1,60);
+            aup_history[4]=randomNum(1,60);
+            aup_history[3]=randomNum(1,60);
+            aup_history[2]=randomNum(1,60);
+            aup_history[1]=randomNum(1,60);
+            aup_history[5]=randomNum(1,60);
+            aup_history[0]=random;
+            aup="请学号为"+' '+aup_history[randomNum(0,6)]+'\u0020'+"号的同学起立";
             document.getElementById("0").innerHTML = aup;
             // document.getElementById("0").innerText = "aup=请学号为+'\u0020'+random+'\u0020'+号的同学起立;  \n document.getElementById(0).innerHTML = aup;";
         }
