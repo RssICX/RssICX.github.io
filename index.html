@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cn" manifest="./manifest.appcache">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,9 +36,18 @@
             document.getElementById("0").innerHTML = aup;
             // document.getElementById("0").innerText = "aup=请学号为+'\u0020'+random+'\u0020'+号的同学起立;  \n document.getElementById(0).innerHTML = aup;";
         }
+        function init(){
+        setInterval(function(){
+        applicationCache.update();
+        },5000);
+        applicationCache.addEventListener("updateready",function(){
+        applicationCache.swapCache();
+        localtion.reload();   
+        },true);
+    }
     </script>
 </head>
-<body>
+<body onload="init();">
     <h1><p id="pup" class="center big" style="height: calc(21vh); font-size: 4rem;">随机点名 Cloud X</p></h1>
     <!-- <div id="0" style=""></div> -->
     <p id="0" class="pc" style="font-size: 3rem; height: calc(20vh)" ><strong></strong></p>
