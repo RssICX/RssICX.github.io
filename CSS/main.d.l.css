@@ -55,6 +55,7 @@ font-size: 36px;
     background-color: red; /* 针对不支持渐变的浏览器 */
     background-image: linear-gradient(red, yellow);
   }
+
 @media ( prefers-color-scheme: dark)
 {
     body 
@@ -103,6 +104,10 @@ font-size: 36px;
         background-color: #008CBA;
         color: white;
     }
+    header
+    {
+        color: aliceblue;
+    }
 }
 @media (prefers-color-scheme: light) {
     .btn {
@@ -150,6 +155,7 @@ font-size: 36px;
     {
         font-size: 0rem;
     }
+
 }
 a {
     color: inherit;

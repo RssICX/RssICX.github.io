@@ -242,6 +242,19 @@
                   }
                   </style></head>
   <body>
+    <script>
+      var if_ie;
+      if (!!window.ActiveXObject || "ActiveXobject" in window) {
+        if_ie=true;
+      }
+      else 
+        {
+          if_ie=false;
+        }
+        if (if_ie=false) {
+          window.location.href="./index.html";
+        }
+    </script>
     <div class="b-content">
       <div class="pic-box">
         <img class="pic-box-logo" src="./CSS/small.ico">
@@ -291,32 +304,6 @@
        <p>© 2023 <strong >高浩朗</strong> | <a style="color: inherit;" href="https://RssICX.github.io/" target="_blank">随机点名 Cloud X</a></p>
       </div>
     </div>
-  
-  
-  
-  <script>
-    document.getElementById('download').onclick = function () {
-      var downloadUrl = ''
-  
-      var clientType = /(Mac|iPhone|iPod|iPad)/i.test(window.navigator.platform) ? 'mac' : 'win'
-        var originUrl =
-            clientType === 'win' ?
-              'https://dl.hdslb.com/mobile/fixed/bili_win/bili_win-install.exe' :
-              'https://dl.hdslb.com/mobile/fixed/pc_electron_mac/bili_mac.dmg'
-        downloadUrl = originUrl + '?t=' + new Date().getFullYear() +  (new Date().getMonth() + 1) + new Date().getDate();
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', '//api.bilibili.com/x/web-frontend/getappversion?target=pc_electron&cdn_url=' + originUrl, true);
-        xhr.withCredentials = true;
-        xhr.onreadystatechange = function () {
-          if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-            var data = JSON.parse(xhr.responseText)
-            if (data && data.data.sole_cdn_url) {
-                window.open(data.data.sole_cdn_url)
-            }
-          }
-        }
-        xhr.send(null);
-    }
-            </script>
+
   </body>
 </html>
