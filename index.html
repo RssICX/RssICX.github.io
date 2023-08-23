@@ -8,7 +8,8 @@
         <link rel="stylesheet" href="./CSS/main.d.l.css">
         <link rel="icon" href="./CSS/small.ico">
         <script>
-            var num2 = str1.replace(/[^\d]/g, " ");
+            var cookie1=document.cookie;
+            var num2 = cookie1.replace(/[^\d]/g, " ");
             var random,aup,aup_history= [0,0,0,0,0,0,0],aup2,aup_math=num2,aup_h=[0,0,0,0];
             function randomNum(minNum,maxNum){ 
                 switch(arguments.length){ 
@@ -43,32 +44,40 @@
             function name(count) {
                 if (count==1) {
                     alert("不可以输入0哦~");
+                    cin();
+                    return false;
                 }
                 else if (count==2) {
                     alert("都说了不能输入0了，还输入，讨厌~");
+                    cin();
+                    return false;
                 }
                 else if (count==3) {
                     alert("哼，你又输入0，不要改了！");
                     cou=0;
+                    cin();
                     return false;
                 }
             }
             function cin() {
                 Math0 = prompt("请输入您想要随机点名的人数");
-                if (Math0==0) {
-                    cou++;
-                    name(cou);
-                    return false;
-                }else
-                {
-                    _o_(Math0);
+                    if (Math0!=null) {
+                        if (Math0==0) {
+                        cou++;
+                        name(cou);
+                        return false;
+                    }
+                    else
+                    {
+                        _o_(Math0);
+                    }
                 }
+                // alert(Math0);
             }
             function _o_(Math01) {
                 aup_math = Math01;
                 document.cookie="aup_math="+Math01;
                 aup_m();
-                alert("点名人数已重置 .awa.");
                 _0er();
             }
             function aup_m(){
