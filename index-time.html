@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间</title>
+    <style>
+        .o {
+            transform: translateX(0%) translateY(calc(26vh));
+            font-size: 100px;
+            /* width: 0%; */
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="time_display" class="o"></p>
+
+</body>
+<script>
+    var day_n, myDate = new Date(), year = null, day, hour, Minutes, Milliseconds, Seconds, mouth = null, date = null, time = null;
+    // myDate.getYear();  //获取当前年份(2位)
+    year = myDate.getUTCFullYear();
+    mouth = myDate.getMonth() + 1;
+    day = myDate.getDate();  //获取当前日(1-31)
+    day_n = myDate.getDay();   //获取当前星期X(0-6,0代表星期天)
+    // myDate.getTime();  //获取当前时间(从1970.1.1开始的毫秒数)
+    hour = myDate.getHours();  //获取当前小时数(0-23)
+    Minutes = myDate.getMinutes();  //获取当前分钟数(0-59)
+    Seconds = myDate.getSeconds();  //获取当前秒数(0-59)
+    Milliseconds = myDate.getMilliseconds(); //获取当前毫秒数(0-999)
+    date = myDate.toLocaleDateString();  //获取当前日期
+    var mytime = myDate.toLocaleTimeString();  //获取当前时间
+    // myDate.toLocaleString( );  //获取日期与时间
+    var date_a_time = myDate.toLocaleString();
+    const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
+    function myMessage() {
+        document.getElementById("time_display").innerHTML = myDate.getHours() + ":" + myDate.getMinutes() + ":" + myDate.getSeconds();
+    }
+    myMessage();
+    for (let index = 0; index < 10; index++) {
+        setTimeout(myMessage, 1000)
+    }
+</script>
+
+</html>

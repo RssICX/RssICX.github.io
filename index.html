@@ -1,123 +1,177 @@
-    <!DOCTYPE html>
-    <html lang="zh-cn" manifest="./manifest.appcache">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <title>随机点名 Cloud X</title>
-        <link rel="stylesheet" href="./CSS/main.d.l.css">
-        <link rel="icon" href="./CSS/small.ico">
-        <script>
-            var cookie1=document.cookie;
-            var num2 = cookie1.replace(/[^\d]/g, " ");
-            var random,aup,aup_history= [0,0,0,0,0,0,0],aup2,aup_math=num2,aup_h=[0,0,0,0];
-            function randomNum(minNum,maxNum){ 
-                switch(arguments.length){ 
-                    case 1: 
-                        return parseInt(Math.random()*minNum+1,10); 
-                    break; 
-                    case 2: 
-                        return parseInt(Math.random()*(maxNum-minNum+1)+minNum,10); 
-                    break; 
-                        default: 
-                            return 0; 
-                        break; 
-                }
-            }
-            var i=0,u=0,tyu=0;
-            function cout() {   
-                    for (let index = 0; index <= 10000; index++) 
-                    {
-                        aup_history[index]=randomNum(1,aup_math);
-                    }
-                    u=aup_history[randomNum(0,10000)];
-                    aup="请学号为"+' '+u+'\u0020'+"号的同学起立";
-                    // aup="请学号为"+' '+"34"+'\u0020'+"号的同学起立";
-                    document.getElementById("0").innerHTML=aup;   
-            }
-            function for_()
-            {
-                // d   ocument.getElementById("pup").innerHTML=x;
-                cout();
-            }
-            var cou=0,Math0;
-            function name(count) {
-                if (count==1) {
-                    alert("不可以输入0哦~");
-                    cin();
-                    return false;
-                }
-                else if (count==2) {
-                    alert("都说了不能输入0了，还输入，讨厌~");
-                    cin();
-                    return false;
-                }
-                else if (count==3) {
-                    alert("哼，你又输入0，不要改了！");
-                    cou=0;
-                    cin();
-                    return false;
-                }
-            }
-            function cin() {
-                Math0 = prompt("请输入您想要随机点名的人数");
-                    if (Math0!=null) {
-                        if (Math0==0) {
-                        cou++;
-                        name(cou);
-                        return false;
-                    }
-                    else
-                    {
-                        _o_(Math0);
-                    }
-                }
-                // alert(Math0);
-            }
-            function _o_(Math01) {
-                aup_math = Math01;
-                document.cookie="aup_math="+Math01;
-                aup_m();
-                _0er();
-            }
-            function aup_m(){
-                return aup_math;
-            }
-        </script>
+<!DOCTYPE html>
+<html lang="zh-cn" manifest="./manifest.appcache">
 
-        <!-- </style> -->
-    </head>
-    <body>
-        <script>
-            var ie;
-            //ie?
-            if (!!window.ActiveXObject || "ActiveXObject" in window)
-            {
-                ie=true;
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>随机点名 Cloud X</title>
+    <link rel="stylesheet" href="./CSS/main.d.l.css">
+    <link rel="icon" href="./CSS/small.ico">
+    <script>
+        // alert (document.cookie);
+        var cookie1 = document.cookie;
+        var num2 = cookie1.replace(/[^\d]/g, " ");
+        var random, aup, aup_history = [0, 0, 0, 0, 0, 0, 0], aup2, aup_math = num2, aup_h = [0, 0, 0, 0];
+        function randomNum(minNum, maxNum) {
+            switch (arguments.length) {
+                case 1:
+                    return parseInt(Math.random() * minNum + 1, 10);
+                    break;
+                case 2:
+                    return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
+                    break;
+                default:
+                    return 0;
+                    break;
             }
-            else
-            {
-                ie=false;
+        }
+        var i = 0, u = 0, tyu = 0;
+        function cout() {
+            for (let index = 0; index <= 10000; index++) {
+                aup_history[index] = randomNum(1, aup_math);
             }
-            if (ie==true)
-            {
-                window.location.href="./ie.html";
-                // document.getElementById("0").innerHTML="随机点名 Cloud X已不兼容IE";
+            u = aup_history[randomNum(0, 10000)];
+            aup = "请学号为" + ' ' + u + '\u0020' + "号的同学起立";
+            // aup="请学号为"+' '+"34"+'\u0020'+"号的同学起立";
+            document.getElementById("0").innerHTML = aup;
+        }
+        function for_() {
+            // d   ocument.getElementById("pup").innerHTML=x;
+            cout();
+        }
+        var cou = 0, Math0;
+        function name(count) {
+            if (count == 1) {
+                alert("不可以输入0哦~");
+                cin();
+                return false;
             }
-        </script>
-        <!-- <header style="top : 0;text-align: center;">自2023/7/14 22:05起，随机点名 Cloud X不再兼容IE，您可以 升级浏览器 以继续访问，感谢您的支持，为您带来的不便请谅解</header> -->
-        <h1><p id="pup" class="center big" style="height: calc(21vh); font-size: 4rem;">随机点名 Cloud X</p></h1>
-        <!-- <div id="0" style=""></div> -->
-        <p id="0" class="pc" style="font-size: 3rem; height: calc(20vh)" ><strong></strong></p>
-        <button style="display:block;margin:0 auto; width:150px; height:45px; font-size: larger;" class="btn1 btn" onclick="for_()" id="button">点击以开始</button>
-        <div style="height: 1ch;"></div>
-        <small><a id="str" onclick="cin();" style="height: 10px; color: #4a8fe3; background-color: inherit;" class="c-aaa" ></a></small>
-        <p  class="footer center" style="font-size: 19px; margin-top: 60px; text-align: center; color: #999;">© 2023 <strong >高浩朗</strong> | <a href="https://RssICX.github.io/" target="_blank">随机点名 Cloud X</a></p>
-    </body>
+            else if (count == 2) {
+                alert("都说了不能输入0了，还输入，讨厌~");
+                cin();
+                return false;
+            }
+            else if (count == 3) {
+                alert("哼，你又输入0，不要改了！");
+                cou = 0;
+                cin();
+                return false;
+            }
+        }
+        function cin() {
+            document.getElementById("0").innerHTML = ("");
+            Math0 = prompt("请输入您想要随机点名的人数");
+            if (Math0 != null) {
+                if (Math0 == 0) {
+                    cou++;
+                    name(cou);
+                    return false;
+                }
+                else {
+                    _o_(Math0);
+                }
+            }
+            // alert(Math0);
+        }
+        function _o_(Math01) {
+            aup_math = Math01;
+            document.cookie = "aup_math=" + Math01;
+            aup_m();
+            _0er();
+        }
+        function aup_m() {
+            return aup_math;
+        }
+        /*当点击调用此方法后,将悬浮窗口显示出来,背景变暗*/
+        function displayWindow() {
+            /*悬浮窗口的显示,需要将display变成block*/
+            document.getElementById("window").style.display = "block";
+            /*将背景变暗*/
+            document.getElementById("shadow").style.display = "block";
+        }
+
+        /*当点击调用此方法,将悬浮窗口和背景全部隐藏*/
+        function hideWindow() {
+            document.getElementById("window").style.display = "none";
+            document.getElementById("shadow").style.display = "none";
+        }
+    </script>
+
+<body>
+    <script>
+        var ie;
+        //ie?
+        if (!!window.ActiveXObject || "ActiveXObject" in window) {
+            ie = true;
+        }
+        else {
+            ie = false;
+        }
+        if (ie == true) {
+            window.location.href = "./ie.html";
+            // document.getElementById("0").innerHTML="随机点名 Cloud X已不兼容IE";
+        }
+    </script>
+    <!-- <header style="top : 0;text-align: center;">自2023/7/14 22:05起，随机点名 Cloud X不再兼容IE，您可以 升级浏览器 以继续访问，感谢您的支持，为您带来的不便请谅解</header> -->
+    <h1>
+        <p id="pup" class="center big" style="height: calc(21vh); font-size: 4rem;">随机点名 Cloud X</p>
+    </h1>
+    <!-- <div id="0" style=""></div> -->
+    <p id="0" class="pc" style="font-size: 3rem; height: calc(20vh)">
+        <strong>
+
+        </strong>
+    </p>
+    <button style="display:block;margin:0 auto; width:150px; height:45px; font-size: larger;" class="btn1 btn d"
+        onclick="for_()" id="button">
+        点击以开始
+    </button>
+    <div style="height: 1ch;"></div>
+    <small>
+        <a id="str" href="javascript:void(0)" onclick="cin();"
+            style="height: 10px; color: #4a8fe3; background-color: inherit;" class="c-aaa">
+        </a>
+    </small>
+    <p class="footer center" style="font-size: 19px; margin-top: 60px; text-align: center; color: #999;">
+        © 2023
+        <strong>
+            高浩朗
+        </strong>
+        |
+        <a href="https://RssICX.github.io/">
+            随机点名 Cloud X
+        </a>
+        |
+        <a href="javascript:void(0)" onclick="displayWindow()">关于</a>
+    </p>
+    <!--悬浮窗口-->
+    <div id="window" class="window_css dong">
+        <div class="her" style="width: 1%;"></div>
+        <div class="colll" style="text-align: right;" title="关闭" onclick="hideWindow()"></div>
+        <div class="center" style="transform: translateY(60%); font-size: 28px; color: #333;">关于 随机点名 Cloud X</div>
+        <div class="center" style="transform: translateX(0%) translateY(70%); font-size: 22px;">
+            <div>这是一个可以“增进”师生关系的程序！</div>
+            <div>还有，作者是男生哦~<br><del><small>（虽然有点可爱）</small></del></div>
+            <div>还有最重要的<br>未经作者允许，不可以二次制作哦~ <br>
+                <del><small>开源是不可能开源的，这辈子都不可能开源的</small></del>
+            </div>
+        </div>
+    </div>
+    <!--出现悬浮窗口后,背景变暗-->
+    <div id="shadow" class="shadow_css dong1"></div>
     <script>
         _0er();
         function _0er() {
-            window.onload = document.getElementById("str").innerHTML="需要点名的人数不是"+aup_m()+"？点我输入";   
+            if (aup_math == "") {
+                document.getElementById("0").innerHTML = (" " + " 你还没有设置随机点名人数哦~程序也不知道要怎么输出了呐~");
+                document.getElementById("str").innerHTML = ("设置点名人数");
+            }
+            else {
+                window.onload = document.getElementById("str").innerHTML = "需要点名的人数不是" + aup_m() + "？点我输入";
+            }
         }
     </script>
+</body>
+
 </html>
