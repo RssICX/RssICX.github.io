@@ -1,48 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <title>时间</title>
-    <style>
-        .o {
-            transform: translateX(0%) translateY(calc(26vh));
-            font-size: 100px;
-            /* width: 0%; */
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(85, 128, 221);
+        }
+
+        #box {
+            /* width: 100px;
+            height: 100px; */
+            background-color: inherit;
+            color: aliceblue;
+            /* position: absolute; */
+            top: 0;
+            left: 0;
+            font-size: 300%;
             text-align: center;
+            /* transform: translateX(calc(45vw)) translateY(calc(50vh)); */
+            display: flex;
+            justify-content: center;
+        }
+
+        #day {
+            /* /* width: 100px;
+            height: 100px; */
+            background-color: inherit;
+            color: aliceblue;
+            /* position: absolute; */
+            /* top: 0;
+            left: 0; */
+            font-size: 500%;
+            /* transform: translateX(174%) translateY(289%); */
+            /* transform: translateX(calc(23vw)) translateY(calc(24vh)); */
+            /* text-align:center; */
+            display: flex;
+            justify-content: center;
+        }
+
+        .parent {
+            display: flex;
+            justify-content: center;
+        }
+
+        .son {
+            float: left;
+            background: pink;
+            width: 50px;
+            height: 50px;
         }
     </style>
 </head>
-
-<body>
-    <p id="time_display" class="o"></p>
-
-</body>
 <script>
-    var day_n, myDate = new Date(), year = null, day, hour, Minutes, Milliseconds, Seconds, mouth = null, date = null, time = null;
-    // myDate.getYear();  //获取当前年份(2位)
-    year = myDate.getUTCFullYear();
-    mouth = myDate.getMonth() + 1;
-    day = myDate.getDate();  //获取当前日(1-31)
-    day_n = myDate.getDay();   //获取当前星期X(0-6,0代表星期天)
-    // myDate.getTime();  //获取当前时间(从1970.1.1开始的毫秒数)
-    hour = myDate.getHours();  //获取当前小时数(0-23)
-    Minutes = myDate.getMinutes();  //获取当前分钟数(0-59)
-    Seconds = myDate.getSeconds();  //获取当前秒数(0-59)
-    Milliseconds = myDate.getMilliseconds(); //获取当前毫秒数(0-999)
-    date = myDate.toLocaleDateString();  //获取当前日期
-    var mytime = myDate.toLocaleTimeString();  //获取当前时间
-    // myDate.toLocaleString( );  //获取日期与时间
-    var date_a_time = myDate.toLocaleString();
-    const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
-    function myMessage() {
-        document.getElementById("time_display").innerHTML = myDate.getHours() + ":" + myDate.getMinutes() + ":" + myDate.getSeconds();
-    }
-    myMessage();
-    for (let index = 0; index < 10; index++) {
-        setTimeout(myMessage, 1000)
-    }
 </script>
+
+<body style="position: relative;">
+    <div style="height: calc(38.5vh);"></div>
+    <div id="day">距离中考还有 <strong id="strong0" style="color: rgb(222, 0, 0);"></strong> 天</div>
+    <div id="box"></div>
+    <!-- <div id="text"><small>今天也要好好学习啊！</small></div> -->
+    <script>
+        var i = 0;
+        function myDate() {
+            var now = new Date();
+            var year = now.getFullYear();
+            var month = now.getMonth() + 1;
+            var day = now.getDate();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            document.getElementById("box").innerHTML = hours + ":" + minutes;
+            // document.getElementById("box").innerHTML = hours + ":" + minutes + ":" + seconds;
+        }
+        myDate();
+        setInterval(myDate, 1000);
+        function getDistanceSpecifiedTime(dateTime) {
+            // 指定日期和时间
+            var EndTime = new Date(dateTime);
+            // 当前系统时间
+            var NowTime = new Date();
+            var t = EndTime.getTime() - NowTime.getTime();
+            var d = Math.floor(t / 1000 / 60 / 60 / 24);
+            var h = Math.floor(t / 1000 / 60 / 60 % 24);
+            var m = Math.floor(t / 1000 / 60 % 60);
+            var s = Math.floor(t / 1000 % 60);
+            // var html = d + " 天" + h + " 时" + m + " 分" + s + " 秒";
+            var html = " " + d + " ";
+            return html;
+        }
+        function daay() {
+            var doc;
+            doc = document.getElementById("strong0");
+            doc.innerHTML = getDistanceSpecifiedTime(new Date("2025/6/28 00:00:00"));
+        }
+        daay();
+        setInterval(daay, 3600000);
+    </script>
+</body>
 
 </html>
