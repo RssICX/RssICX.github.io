@@ -5,13 +5,29 @@
     <meta charset="utf-8">
     <title>时间</title>
     <style type="text/css">
+        @font-face {
+            font-family: "font";
+            src: url("./CSS/Font-Faiml/HarmonyOS_Sans_SC_Light.ttf") format('truetype');
+        }
+
+        .footer {
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
+            width: 100%;
+            height: 50px;
+            background-color: initial;
+            z-index: 9999;
+        }
+
         * {
-            margin: 0;
-            padding: 0;
+            /* margin: 0;
+            padding: 0; */
+            font-family: "font";
         }
 
         body {
-            background-color: rgb(85, 128, 221);
+            background-color: rgb(99, 140, 228);
         }
 
         #box {
@@ -59,13 +75,18 @@
     </style>
 </head>
 <script>
+    console.log("陈卓伦是猫娘还是药娘？\n1.猫娘\t2.药娘");
 </script>
 
 <body style="position: relative;">
     <div style="height: calc(38.5vh);"></div>
     <div id="day">距离中考还有 <strong id="strong0" style="color: rgb(222, 0, 0);"></strong> 天</div>
     <div id="box"></div>
-    <!-- <div id="text"><small>今天也要好好学习啊！</small></div> -->
+    <!-- <div class="parent" style="color: aliceblue;">陈卓伦是猫娘还是药娘？</div>
+    <button>猫娘</button>
+    <button>药娘</button> -->
+    <div class="parent" style="color: aliceblue;">今天也要好好学习啊!</div>
+    <div class="parent footer" style="color: rgb(63, 63, 63);">&copy 2023 高浩朗</div>
     <script>
         var i = 0;
         function myDate() {
