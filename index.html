@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>随机点名 Cloud X</title>
+    <title>随机点名 iAir</title>
     <link rel="stylesheet" href="./CSS/main.d.l.css">
     <link rel="icon" href="./CSS/small.ico">
     <script>
@@ -51,37 +51,61 @@
         }
         var cou = 0, Math0;
         function name(count) {
+            var hhhhh = document.getElementById("ti");
             if (count == 1) {
-                alert("不可以输入0哦~");
-                cin();
+                hhhhh.innerText = ("不可以输入0哦~");
+                // cin();
                 return false;
             }
             else if (count == 2) {
-                alert("都说了不能输入0了，还输入，讨厌~");
-                cin();
+                hhhhh.innerText = ("都说了不能输入0了，还输入，讨厌~");
+                // cin();
                 return false;
             }
             else if (count == 3) {
-                alert("哼，你又输入0，不要改了！");
+                hhhhh.innerText = ("哼，你又输入0，不要改了！");
                 cou = 0;
-                cin();
+                // cin();
+                setInterval(hideiput, 2000);
                 return false;
             }
         }
-        function cin() {
-            document.getElementById("0").innerHTML = ("");
-            Math0 = prompt("请输入您想要随机点名的人数");
-            if (Math0 != null) {
-                if (Math0 == 0) {
-                    cou++;
-                    name(cou);
-                    return false;
-                }
-                else {
-                    _o_(Math0);
-                }
+        function cou2(count) {
+            var hhhhh = document.getElementById("ti");
+            if (count == 1) {
+                hhhhh.innerText = ("不可以不输入哦~");
+                // cin();
+                return false;
             }
-            // alert(Math0);
+            else if (count == 2) {
+                hhhhh.innerText = ("都说了不可以不输入了，讨厌~");
+                // cin();
+                return false;
+            }
+            else if (count == 3) {
+                hhhhh.innerText = ("哼，你又什么都没有输入，不要改了！");
+                cou = 0;
+                // cin();
+                hhhhh.innerText = ("");
+                // setInterval(hideiput0, 2000);
+                return false;
+            }
+        }
+        function hideiput0(){
+
+        }
+        function cin() {
+            var bian, n = 0;
+            bian = document.getElementById("input").value;
+            // alert(bian);
+            // n++;
+            if (bian == 0 && bian != "") {
+                cou++;
+                name(cou);
+            }
+            else {
+                document.getElementById("ti").innerText = "";
+            }
         }
         function _o_(Math01) {
             aup_math = Math01;
@@ -105,6 +129,14 @@
             document.getElementById("window").style.display = "none";
             document.getElementById("shadow").style.display = "none";
         }
+        function hideiput() {
+            document.getElementById("input_window").style.display = "none";
+            document.getElementById("shadow_down").style.display = "none";
+        }
+        function showipyt() {
+            document.getElementById("input_window").style.display = "block";
+            document.getElementById("shadow_down").style.display = "block";
+        }
     </script>
 
 <body>
@@ -119,12 +151,12 @@
         }
         if (ie == true) {
             window.location.href = "./ie.html";
-            // document.getElementById("0").innerHTML="随机点名 Cloud X已不兼容IE";
+            // document.getElementById("0").innerHTML="随机点名 iAir已不兼容IE";
         }
     </script>
-    <!-- <header style="top : 0;text-align: center;">自2023/7/14 22:05起，随机点名 Cloud X不再兼容IE，您可以 升级浏览器 以继续访问，感谢您的支持，为您带来的不便请谅解</header> -->
+    <!-- <header style="top : 0;text-align: center;">自2023/7/14 22:05起，随机点名 iAir不再兼容IE，您可以 升级浏览器 以继续访问，感谢您的支持，为您带来的不便请谅解</header> -->
     <h1>
-        <p id="pup" class="center big" style="height: calc(21vh); font-size: 4rem;">随机点名 Cloud X</p>
+        <p id="pup" class="center big" style="height: calc(21vh); font-size: 4rem;">随机点名 iAir</p>
     </h1>
     <!-- <div id="0" style=""></div> -->
     <p id="0" class="pc u" style="font-size: 3rem; height: calc(20vh)">
@@ -137,11 +169,25 @@
         点击以开始
     </button>
     <div style="height: 1ch;"></div>
+
     <small>
-        <a id="str" href="javascript:void(0)" onclick="cin();"
+        <a id="str" href="javascript:void(0)" onclick="showipyt();"
             style="height: 10px; color: #4a8fe3; background-color: inherit;" class="c-aaa">
         </a>
     </small>
+    <div id="input_window" class="window_css_ dong0101">
+        <div class="her" style="width: 1%;"></div>
+        <div class="colll" style="text-align: right;" title="关闭" onclick="hideiput();"></div>
+        <div class="center" style="transform: translateY(80%) translateX(6%); font-size: 15px; color: #333;">
+            <strong>你想为多少人点名呢？ヾ(^▽^*)))</strong>
+        </div>
+        <div style="display: flex;justify-content: center;transform: translateX(0%) translateY(147%);">
+            <input id="input" placeholder="输入框在这里哦૮꒰ ˶• ༝ •˶꒱ა" type="number">
+            <button class="btn btn1" onclick="cin();">确定</button>
+        </div>
+        <p id="ti" style="display: flex;justify-content: center; transform: translateX(0%) translateY(322%);"></p>
+    </div>
+    <div id="shadow_down" class="shadow_css_ dong1_"></div>
     <p class="footer center" style="font-size: 19px; margin-top: 60px; text-align: center; color: #999;">
         © 2023
         <strong class="a">
@@ -149,7 +195,7 @@
         </strong>
         |
         <a class="a" href="https://RssICX.github.io/">
-            随机点名 Cloud X
+            随机点名 iAir
         </a>
         |
         <a class="a" href="javascript:void(0)" onclick="displayWindow()">关于</a>
@@ -159,7 +205,7 @@
         <div class="her" style="width: 1%;"></div>
         <div class="colll" style="text-align: right;" title="关闭" onclick="hideWindow()"></div>
         <div class="center" style="transform: translateY(60%); font-size: 28px; color: #333;">
-            <strong>关于 随机点名 Cloud X</strong>
+            <strong>关于 随机点名 iAir</strong>
         </div>
         <div style="height: 23%;"></div>
         <div class="center" style="font-size: 22px;">
@@ -175,7 +221,7 @@
     <script>
         _0er();
         function _0er() {
-            if (aup_math == "") {
+            if (document.cookie == "") {
                 document.getElementById("0").innerHTML = (" " + " 你还没有设置随机点名人数哦~程序也不知道要怎么输出了呐~");
                 document.getElementById("str").innerHTML = ("设置点名人数");
             }
