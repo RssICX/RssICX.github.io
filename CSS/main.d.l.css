@@ -1,10 +1,14 @@
+/* 上面的代码是一个CSS样式表。它为网页上的不同元素定义了各种样式。以下是代码所做的摘要： */
 @charset "utf-8";
 
+/* `@font-face`
+规则用于定义网页的自定义字体。在本例中，它定义了一个名为“PingFangSC-Light”的字体系列并指定了字体文件的来源。字体文件位于“./Font-Faiml/HarmonyOS_Sans_SC_Light.ttf”，格式为TrueType。 */
 @font-face {
     font-family: "PingFangSC-Light";
     src: url("./Font-Faiml/HarmonyOS_Sans_SC_Light.ttf") format('truetype');
 }
 
+/* 代码“#grad1”针对 ID 为“grad1”的元素并向其应用背景渐变。渐变从底部开始，从红色到 #fd8403 再到黄色。 */
 #grad1 {
     background-image: -webkit-linear-gradient(bottom, red, #fd8403, yellow);
     -webkit-background-clip: text;
@@ -56,6 +60,9 @@
 }
 
 
+/* `@media (prefers-color-scheme: dark) {`
+是一个媒体查询，针对偏好深色配色方案的设备或浏览器。它允许您定义当用户的设备或浏览器设置为深色配色方案时将应用的特定样式。在本例中，它将正文的背景颜色设置为#333，段落和标题的文本颜色设置为白色，并对按钮和窗口应用不同的样式。 */
+/* “@media (prefers-color-scheme: dark)”规则是一种媒体查询，针对偏好深色配色方案的设备或浏览器。它允许您定义当用户的设备或浏览器设置为深色配色方案时将应用的特定样式。 */
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #333;
@@ -144,6 +151,7 @@
 }
 
 @media (prefers-color-scheme: light) {
+   /* `.btn` 类定义按钮元素的 CSS 样式。 */
     .btn {
         /* 文字颜色 */
         color: #0099CC;
@@ -318,6 +326,10 @@
     animation-name: donghua2;
 }
 
+/* 该评论解释了“@keyframes”规则的目的。它指出“donghua2”关键帧动画是在此特定代码片段中定义的。它在 0.95
+秒的持续时间内对元素的“margin-left”和“width”属性进行动画处理。 */
+/* “@keyframes”规则定义了一组用于为元素设置动画的关键帧。在这个特定的代码片段中，定义了“donghua2”关键帧动画。它在 0.95
+秒的持续时间内对元素的“margin-left”属性和“width”属性进行动画处理。 */
 @keyframes donghua2 {
     from {
         margin-left: 0%;
@@ -330,9 +342,11 @@
         /* margin-right: 100%; */
     }
 }
+/* CSS 代码 `#input{ border-radius: 10px; }` 将 ID 为“input”的元素的边框半径设置为 10 像素。这将为元素提供圆角。 */
 #input{
     border-radius: 10px;
 }
+/* `.window_css_` 类定义窗口元素的 CSS 样式。 */
 .window_css_ {
     display: none;
     position: absolute;
