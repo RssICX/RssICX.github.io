@@ -10,143 +10,11 @@ a footer with links. -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>随机点名 iAir</title>
-    <link rel="stylesheet" href="./CSS/main.d.l.css">
-    <link rel="icon" href="./CSS/small.ico">
-    <script>
-        // alert (document.cookie);
-        var cookie1 = document.cookie;
-        var num2 = cookie1.replace(/[^\d]/g, " ");
-        var random, aup, aup_history = [0, 0, 0, 0, 0, 0, 0], aup2, aup_math = num2, aup_h = [0, 0, 0, 0];
-        // <!-- The `randomNum` function is a JavaScript function that generates a random number between a
-        // minimum and maximum value. -->
-        function randomNum(minNum, maxNum) {
-            switch (arguments.length) {
-                case 1:
-                    return parseInt(Math.random() * minNum + 1, 10);
-                    break;
-                case 2:
-                    return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
-                    break;
-                default:
-                    return 0;
-                    break;
-            }
-        }
-        var i = 0, u = 0, tyu = 0;
-        var id_0 = document.getElementById("0");
-        function cout() {
-            for (let index = 0; index <= 10000; index++) {
-                aup_history[index] = randomNum(1, aup_math);
-            }
-            u = aup_history[randomNum(0, 10000)];
-            aup = "请学号为" + ' ' + u + '\u0020' + "号的同学起立";
-            // aup="请学号为"+' '+"34"+'\u0020'+"号的同学起立";
-            var _0___o_ = document.getElementById("0");
-            _0___o_.innerHTML = aup;
-        }
-        function myse() {
-            document.getElementById("0").style.display = "block";
-        }
-        // sleep(fun, 2000);
-        function for_() {
-            cout();
-            document.getElementById("0").style.display = "none";
-            document.getElementById("0").setAttribute("class", "center u");
-            myse();
-        }
-        var cou = 0, Math0;
-        function name(count) {
-            var hhhhh = document.getElementById("ti");
-            if (count == 1) {
-                hhhhh.innerText = ("不可以输入0哦~");
-                // cin();
-                return false;
-            }
-            else if (count == 2) {
-                hhhhh.innerText = ("都说了不能输入0了，还输入，讨厌~");
-                // cin();
-                return false;
-            }
-            else if (count == 3) {
-                hhhhh.innerText = ("哼，你又输入0，不要改了！");
-                cou = 0;
-                // cin();
-                setInterval(hideiput, 2000);
-                return false;
-            }
-        }
-        function cou2(count) {
-            var hhhhh = document.getElementById("ti");
-            if (count == 1) {
-                hhhhh.innerText = ("不可以不输入哦~");
-                // cin();
-                return false;
-            }
-            else if (count == 2) {
-                hhhhh.innerText = ("都说了不可以不输入了，讨厌~");
-                // cin();
-                return false;
-            }
-            else if (count == 3) {
-                hhhhh.innerText = ("哼，你又什么都没有输入，不要改了！");
-                cou = 0;
-                // cin();
-                hhhhh.innerText = ("");
-                // setInterval(hideiput0, 2000);
-                return false;
-            }
-        }
-        function hideiput0() {
-
-        }
-        // <!-- The `cin()` function is used to handle user input for the number of names to generate. -->
-        function cin() {
-            var bian, n = 0;
-            bian = document.getElementById("input").value;
-            // alert(bian);
-            // n++;
-            if (bian == 0 && bian != "") {
-                cou++;
-                name(cou);
-            }
-            else {
-                document.getElementById("ti").innerText = "";
-                _o_(bian);
-                hideiput();
-            }
-        }
-        function _o_(Math01) {
-            aup_math = Math01;
-            document.cookie = "aup_math=" + Math01;
-            aup_m();
-            _0er();
-        }
-        function aup_m() {
-            return aup_math;
-        }
-        /*当点击调用此方法后,将悬浮窗口显示出来,背景变暗*/
-        // <!-- 该代码定义了四个 JavaScript 函数： -->
-        function displayWindow() {
-            /*悬浮窗口的显示,需要将display变成block*/
-            document.getElementById("window").style.display = "block";
-            /*将背景变暗*/
-            document.getElementById("shadow").style.display = "block";
-        }
-
-        /*当点击调用此方法,将悬浮窗口和背景全部隐藏*/
-        function hideWindow() {
-            document.getElementById("window").style.display = "none";
-            document.getElementById("shadow").style.display = "none";
-        }
-        function hideiput() {
-            document.getElementById("input_window").style.display = "none";
-            document.getElementById("shadow_down").style.display = "none";
-        }
-        function showipyt() {
-            document.getElementById("input_window").style.display = "block";
-            document.getElementById("shadow_down").style.display = "block";
-        }
-    </script>
+    <link rel="stylesheet" href="./styles/main.d.l.css">
+    <link rel="stylesheet" href="./styles/media.css">
+    <link rel="icon" href="./images/maca.png">
+    <link rel="stylesheet" href="./styles/window.css">
+    <script src="./JS/main.js"></script>
 
 <body>
     <script>
@@ -166,7 +34,8 @@ a footer with links. -->
     <!-- <header style="top : 0;text-align: center;">自2023/7/14 22:05起，随机点名 iAir不再兼容IE，您可以 升级浏览器 以继续访问，感谢您的支持，为您带来的不便请谅解</header> -->
     <!-- 上面的代码是生成随机名称的网页的 HTML 代码。它包括标题、段落元素、按钮以及一些用于输入和窗口显示的附加元素。该代码还包括用于格式化和定位页面上的元素的 CSS 样式。 -->
     <h1>
-        <p id="pup" class="center big" style="height: calc(21vh); font-size: 4rem;">随机点名 iAir</p>
+        <p id="pup" class="center big"
+            style="height: calc(21vh); font-size: 4rem; box-shadow: 0 0 0 0 rgba(0, 0, 0, .3);">随机点名 iAir</p>
     </h1>
     <!-- <div id="0" style=""></div> -->
     <p id="0" class="pc u" style="font-size: 3rem; height: calc(20vh)">
@@ -174,6 +43,7 @@ a footer with links. -->
 
         </strong>
     </p>
+    <!-- <div class="incorrect" style="size: 10ch;"></div> -->
     <button style="display:block;margin:0 auto; width:150px; height:45px; font-size: larger;" class="btn1 btn d"
         onclick="for_()" id="button">
         点击以开始
@@ -204,12 +74,52 @@ a footer with links. -->
             高浩朗
         </strong>
         |
-        <a class="a" href="https://RssICX.github.io/">
-            随机点名 iAir
-        </a>
-        |
         <a class="a" href="javascript:void(0)" onclick="displayWindow()">关于</a>
     </p>
+    <div style="display: flex;justify-content: space-around; transform: translateY(calc(29vh))">
+        <a href="./index-time.html" id="timeday" style="color: #999;text-decoration: none;display: flex;"></a>
+        <a href="./index-time.html" id="time" style="color: #999;text-decoration: none;display: flex;"></a>
+    </div>
+    <script>
+        var i = 0;
+        // <!-- `myDate()` 函数用于在网页上显示当前时间。它创建一个新的“Date”对象来获取当前日期和时间。然后，它从“Date”对象中提取小时和分钟，并设置 id
+        // 为“box”的元素的innerHTML，以“小时：分钟”的格式显示时间。 -->
+        function myDate() {
+            var now = new Date();
+            var year = now.getFullYear();
+            var month = now.getMonth() + 1;
+            var day = now.getDate();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            document.getElementById("time").innerHTML = hours + ":" + minutes;
+            // document.getElementById("box").innerHTML = hours + ":" + minutes + ":" + seconds;
+        }
+        myDate();
+        setInterval(myDate, 1000);
+        function getDistanceSpecifiedTime(dateTime) {
+            // 指定日期和时间
+            var EndTime = new Date(dateTime);
+            // 当前系统时间
+            var NowTime = new Date();
+            var t = EndTime.getTime() - NowTime.getTime();
+            var d = Math.floor(t / 1000 / 60 / 60 / 24);
+            var h = Math.floor(t / 1000 / 60 / 60 % 24);
+            var m = Math.floor(t / 1000 / 60 % 60);
+            var s = Math.floor(t / 1000 % 60);
+            // var html = d + " 天" + h + " 时" + m + " 分" + s + " 秒";
+            var html = " " + d + " ";
+            return html;
+        }
+        // <!-- “daay()”函数用于计算指定日期和时间之前剩余的天数。 -->
+        function daay() {
+            var doc;
+            doc = document.getElementById("timeday");
+            doc.innerHTML = "距离中考还有" + getDistanceSpecifiedTime(new Date("2025/6/28 00:00:00")) + "天";
+        }
+        daay();
+        setInterval(daay, 3600000);
+    </script>
     <!--悬浮窗口-->
     <div id="window" class="window_css dong">
         <div class="her" style="width: 1%;"></div>

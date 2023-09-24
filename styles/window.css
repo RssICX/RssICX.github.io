@@ -1,0 +1,186 @@
+.c-aaa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.colll {
+    transform: translateX(290%) translateY(212%);
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 97, 88);
+    border-radius: 5px;
+    position: fixed;
+    z-index: 100;
+}
+
+.her {
+    height: 1%;
+}
+
+.dong {
+    animation-duration: 0.4s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        height: 0%;
+        /* width: 0%; */
+    }
+
+    to {
+        height: 60%;
+        /* width: 50%; */
+    }
+}
+
+.dong1 {
+    animation-duration: 0.4s;
+    animation-name: slidein1;
+}
+
+@keyframes slidein1 {
+    from {
+        height: 0%;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+
+.window_showee {
+    height: 23%;
+}
+
+.u {
+    /* display: block; */
+    animation-duration: 0.95s;
+    animation-name: donghua;
+}
+
+@keyframes donghua {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+        /* margin-right: 100%; */
+    }
+}
+
+.u2 {
+    display: block;
+    animation-duration: 0.95s;
+    animation-name: donghua2;
+}
+
+/* 该评论解释了“@keyframes”规则的目的。它指出“donghua2”关键帧动画是在此特定代码片段中定义的。它在 0.95
+秒的持续时间内对元素的“margin-left”和“width”属性进行动画处理。 */
+/* “@keyframes”规则定义了一组用于为元素设置动画的关键帧。在这个特定的代码片段中，定义了“donghua2”关键帧动画。它在 0.95
+秒的持续时间内对元素的“margin-left”属性和“width”属性进行动画处理。 */
+@keyframes donghua2 {
+    from {
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    to {
+        margin-left: 100%;
+        width: 300%;
+        /* margin-right: 100%; */
+    }
+}
+
+/* CSS 代码 `#input{ border-radius: 10px; }` 将 ID 为“input”的元素的边框半径设置为 10 像素。这将为元素提供圆角。 */
+#input {
+    border-radius: 10px;
+}
+
+/* `.window_css_` 类定义窗口元素的 CSS 样式。 */
+.window_css_ {
+    display: none;
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    width: 20%;
+    height: 30%;
+    border-radius: 24px;
+    border: 1px solid rgb(0, 140, 186);
+    background-color: rgb(255, 255, 255);
+    z-index: 11;
+}
+
+.shadow_css_ {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(125, 123, 123, 0.784);
+    z-index: 10;
+    /* 为mozilla firefox 设置透明度  */
+    /* -moz-opacity: 0.6;
+    /* 设置透明度 */
+    /* opacity: .60; */
+    /* 为IE 设置透明度  */
+    /* filter: alpha(opacity=66); */
+    filter: blur(10px);
+}
+
+.dong0101 {
+    animation-duration: 0.4s;
+    animation-name: slidein0101;
+}
+
+@keyframes slidein0101 {
+    from {
+        height: 0%;
+        /* width: 0%; */
+    }
+
+    to {
+        height: 30%;
+        /* width: 50%; */
+    }
+}
+
+.dong1_ {
+    animation-duration: 0.4s;
+    animation-name: slidein1_;
+}
+
+@keyframes slidein1_ {
+    from {
+        height: 0%;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+
+.incorrect:before {
+    content: '\2716';
+    color: rgb(66, 4, 5);
+}
+
+.new_dow {
+    /* border-radius: 500px; */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3%;
+    background-color: #2f4259;
+    backdrop-filter: blur(20px);
+    transform: translateY(-10%) translateX(-0.87%);
+    box-shadow: 0 0 30px 10px rgba(0, 0, 0, .3);
+}
+.your-class {
+    background-image: url("data:image/png;base64,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");
+}
