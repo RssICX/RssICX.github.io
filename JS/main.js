@@ -16,6 +16,7 @@ function randomNum(minNum, maxNum) {
             return 0;
             break;
     }
+    
 }
 var i = 0, u = 0, tyu = 0;
 var id_0 = document.getElementById("0");
@@ -101,6 +102,7 @@ function cin() {
     }
     else if (bian>199) {
         document.getElementById("ti").innerText="你是要给全世界的人点名吗？";
+        // document.getElementById("it").innerText=""
     }
     else {
         document.getElementById("ti").innerText = "";

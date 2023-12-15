@@ -70,3 +70,8 @@
     position: fixed;
     top: 20%;
 }
+.set
+{
+    display: fixed;
+    justify-content: end;
+}
