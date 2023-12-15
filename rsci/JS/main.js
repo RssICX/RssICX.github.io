@@ -27,7 +27,7 @@ function cout() {
     let inr=0;
     inr=aup_history[randomNum(0, 10000)];
     u =bd[inr];
-    aup = "请" +inr+ "号的"+ '\u0020' + u + '\u0020' + "同学起立";
+    aup = "请" +'\u0020'+inr+ "号 的"+ '\u0020' + u + '\u0020' + "同学起立";
     // aup="请学号为"+' '+"34"+'\u0020'+"号的同学起立";
     var _0___o_ = document.getElementById("0");
     _0___o_.innerHTML = aup;
