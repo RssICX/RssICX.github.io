@@ -1,16 +1,4 @@
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: #333;
-    }
-
-    p {
-        color: white;
-    }
-
-    h1 {
-        color: white;
-    }
-
     .btn {
         /* 文字颜色 */
         color: #0099CC;
@@ -47,10 +35,6 @@
     .btn1:hover {
         background-color: #008CBA;
         color: white;
-    }
-
-    header {
-        color: aliceblue;
     }
 
     .window_css {
