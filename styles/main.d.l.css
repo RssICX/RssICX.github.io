@@ -63,6 +63,17 @@
 .a :hover {
     /* color: inherit;
     text-decoration: none; */
+    color: rgb(206, 227, 239);
+}
+.a12 {
+    color: rgb(101, 225, 136);
+    text-decoration: none;
+    transition: .25s;
+}
+
+.a12 :hover {
+    /* color: inherit;
+    text-decoration: none; */
     color: rgb(0, 140, 186);
 }
 .top

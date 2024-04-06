@@ -15,7 +15,7 @@ a footer with links. -->
     <link rel="icon" href="./images/maca.png">
     <link rel="stylesheet" href="./styles/window.css">
     <script src="./JS/main.js"></script>
-
+    <script type="text/javascript" src="./JS/current-device.min.js"></script>
 <body>
     <script>
         var ie;
@@ -30,6 +30,13 @@ a footer with links. -->
             window.location.href = "./ie.html";
             // document.getElementById("0").innerHTML="随机点名 iAir已不兼容IE";
         }
+        var audio= new Audio('./music/back.mp3');
+        var size=audio.duration;
+        function play_minuca(){
+            audio.play;//播放
+        }
+        play_minuca();
+        window.setInterval(play_minuca,size*1000+1000);
     </script>
     <!-- <header style="top : 0;text-align: center;">自2023/7/14 22:05起，随机点名 iAir不再兼容IE，您可以 升级浏览器 以继续访问，感谢您的支持，为您带来的不便请谅解</header> -->
     <!-- 上面的代码是生成随机名称的网页的 HTML 代码。它包括标题、段落元素、按钮以及一些用于输入和窗口显示的附加元素。该代码还包括用于格式化和定位页面上的元素的 CSS 样式。 -->
@@ -85,7 +92,7 @@ a footer with links. -->
         <a href="./index-time.html" id="time" style="color: #999;text-decoration: none;display: flex;"></a>
     </div>
     <!--悬浮窗口-->
-    <div id="window" class="window_css dong">
+    <about id="window" class="window_css dong">
         <div class="her" style="width: 1%;"></div>
         <div class="colll" style="text-align: right;" title="关闭" onclick="hideWindow()"></div>
         <div class="center" style="transform: translateY(60%); font-size: 28px; color: #333;">
@@ -96,10 +103,10 @@ a footer with links. -->
             <div>这是一个可以“增进”师生关系的程序！</div>
             <!-- <div>还有，作者是男生哦~<br><del><small style="font-size: 10%;">（虽然看起来有点可爱）</small></del></div> -->
             <div>还有最重要的<br>未经作者允许，不可以二次制作哦~ <br>
-                <del><small>开源是不可能开源的，这辈子都不可能开源的</small></del>
+                <div>本项目使用<a class="a12" href="https://github.com/matthewhudson/current-device">current-device</a>库，并依据GUN协议开源</div>
             </div>
         </div>
-    </div>
+    </about>
     <!--出现悬浮窗口后,背景变暗-->
     <div id="shadow" class="shadow_css dong1"></div>
     <script>
