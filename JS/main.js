@@ -143,24 +143,57 @@ function aup_m() {
 
 // 显示悬浮窗口
 function displayWindow() {
-    document.getElementById("window").style.display = "block";
-    document.getElementById("shadow").style.display = "block";
+    var aboutWindow = document.getElementById('window');
+    aboutWindow.style.display = 'block'; // 先显示窗口
 }
 
 // 隐藏悬浮窗口
 function hideWindow() {
-    document.getElementById("window").style.display = "none";
-    document.getElementById("shadow").style.display = "none";
+    var aboutWindow = document.getElementById('window');
+    
+    // 添加关闭动画类
+    aboutWindow.classList.add('dong1');
+    
+    // 监听动画结束事件
+    aboutWindow.addEventListener('animationend', function animationEnded() {
+        // 隐藏窗口
+        this.style.display = 'none';
+        
+        // 移除关闭动画类
+        this.classList.remove('dong1');
+        
+        // 移除动画结束事件监听器，防止重复触发
+        this.removeEventListener('animationend', animationEnded);
+        
+        // 重置动画状态（如果需要在下一次显示时从头开始）
+        // 这一步取决于进入动画的实现方式，如果进入动画也有一个类，比如'.dongEnter'，那么需要在显示前移除这个类
+        // aboutWindow.classList.remove('dongEnter'); 
+    });
 }
 
 // 隐藏输入窗口
 function hideiput() {
-    document.getElementById("input_window").style.display = "none";
-    document.getElementById("shadow_down").style.display = "none";
+    var inputWindow = document.getElementById('input_window');
+    
+    // 添加关闭动画类
+    inputWindow.classList.add('dong0101-close');
+    
+    // 监听动画结束事件
+    inputWindow.addEventListener('animationend', function() {
+        // 动画结束后隐藏元素并移除关闭动画类
+        this.style.display = 'none';
+        this.classList.remove('dong0101-close');
+        
+        // 移除事件监听器，避免重复执行
+        this.removeEventListener('animationend', arguments.callee);
+    });
 }
 
 // 显示输入窗口
 function showipyt() {
-    document.getElementById("input_window").style.display = "block";
-    document.getElementById("shadow_down").style.display = "block";
+    var inputWindow = document.getElementById('input_window');
+    inputWindow.style.display = 'block'; // 显示元素
+    inputWindow.classList.remove('dong0101'); // 确保动画可以重新播放
+    void inputWindow.offsetWidth; // 触发重绘，确保动画生效
+    inputWindow.classList.add('dong0101'); // 重新应用进入动画类
 }

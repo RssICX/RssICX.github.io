@@ -22,38 +22,43 @@
     height: 1%;
 }
 
-/* .dong类样式定义，设置动画持续时间和名称 */
 .dong {
-    animation-duration: 0.4s;
-    animation-name: slidein;
+  animation-duration: 0.8s;
+  animation-name: slidein;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* 示例使用的非线性贝塞尔曲线 */
 }
 
-/* slidein关键帧动画定义 */
+/* 更新 slidein 关键帧动画，可以调整百分比和透明度来改变动画节奏 */
 @keyframes slidein {
-    from {
-        height: 0%;
-    }
-    to {
-        height: 60%;
-    }
+  0% {
+      opacity: 0; /* 添加透明度变化，让元素淡入 */
+      transform: translateY(30%);
+  }
+  100% {
+      opacity: 1; /* 完全显示时透明度为1 */
+      transform: translateY(0%);
+  }
 }
 
-/* .dong1类样式定义，设置动画持续时间和名称 */
+/* 更新 .dong1 类以使用不同的非线性动画效果 */
 .dong1 {
-    animation-duration: 0.4s;
-    animation-name: slidein1;
+  animation-duration: 0.4s;
+  animation-name: slideout;
+  animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045); /* 另一个非线性贝塞尔曲线 */
 }
 
-/* slidein1关键帧动画定义 */
-@keyframes slidein1 {
-    from {
-        height: 0%;
-    }
-    to {
-        height: 100%;
-    }
+/* 定义 slideout 关键帧动画，模拟非线性关闭效果 */
+@keyframes slideout {
+  0% {
+      transform: translateY(0%);
+      opacity: 1;
+  }
+  100% {
+      /* height: 0%; */
+      transform: translateY(-30%);
+      opacity: 0; /* 完全关闭时透明度为0 */
+  }
 }
-
 /* .window_showee类样式定义 */
 .window_showee {
     height: 23%;
@@ -103,18 +108,38 @@
 
 /* .dong0101类样式定义，设置动画持续时间和名称 */
 .dong0101 {
-    animation-duration: 0.4s;
+    animation-duration: 0.8s;
     animation-name: slidein0101;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* 示例使用的非线性贝塞尔曲线 */
 }
 
 /* slidein0101关键帧动画定义 */
 @keyframes slidein0101 {
-    from {
-        height: 0%;
+    0% {
+        opacity: 0; /* 添加透明度变化，让元素淡入 */
+        transform: translateY(30%);
     }
-    to {
-        height: 30%;
+    100% {
+        opacity: 1; /* 完全显示时透明度为1 */
+        transform: translateY(0%);
     }
+
+}
+.dong0101-close {
+  animation-duration: 0.8s;
+  animation-name: slideout0101;
+  animation-fill-mode: forwards; /* 确保动画结束后保持最后一帧的状态 */
+}
+/* 新增关闭动画的关键帧定义 */
+@keyframes slideout0101 {
+  0% {
+      opacity: 1;
+      transform: translateY(0%);
+  }
+  100% {
+      opacity: 0;
+      transform: translateY(-30%);
+  }
 }
 
 /* .dong1_类样式定义，设置动画持续时间和名称 */
