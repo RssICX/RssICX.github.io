@@ -150,3 +150,828 @@
     transform: translateY(-10%) translateX(-0.87%);
     box-shadow: 0 0 30px 10px rgba(0, 0, 0, .3); /* 设置阴影 */
 }
+  .wave {
+    animation: wave 6s ease-in-out infinite;
+    width: 10vw;
+    height: 10vh;
+    transform-origin: bottom;
+    position: relative;
+    z-index: 10;
+  }
+  .wave:nth-child(1) {
+    background: rgb(1, 255, 126);
+    animation-delay: 10ms;
+  }
+  .wave:nth-child(2) {
+    background: rgb(1, 255, 127);
+    animation-delay: 20ms;
+  }
+  .wave:nth-child(3) {
+    background: rgb(1, 255, 128);
+    animation-delay: 30ms;
+  }
+  .wave:nth-child(4) {
+    background: rgb(1, 255, 129);
+    animation-delay: 40ms;
+  }
+  .wave:nth-child(5) {
+    background: rgb(1, 255, 130);
+    animation-delay: 50ms;
+  }
+  .wave:nth-child(6) {
+    background: rgb(1, 255, 131);
+    animation-delay: 60ms;
+  }
+  .wave:nth-child(7) {
+    background: rgb(1, 255, 132);
+    animation-delay: 70ms;
+  }
+  .wave:nth-child(8) {
+    background: rgb(1, 255, 133);
+    animation-delay: 80ms;
+  }
+  .wave:nth-child(9) {
+    background: rgb(1, 255, 134);
+    animation-delay: 90ms;
+  }
+  .wave:nth-child(10) {
+    background: rgb(1, 255, 135);
+    animation-delay: 100ms;
+  }
+  .wave:nth-child(11) {
+    background: rgb(1, 255, 136);
+    animation-delay: 110ms;
+  }
+  .wave:nth-child(12) {
+    background: rgb(1, 255, 137);
+    animation-delay: 120ms;
+  }
+  .wave:nth-child(13) {
+    background: rgb(1, 255, 138);
+    animation-delay: 130ms;
+  }
+  .wave:nth-child(14) {
+    background: rgb(1, 255, 139);
+    animation-delay: 140ms;
+  }
+  .wave:nth-child(15) {
+    background: rgb(1, 255, 140);
+    animation-delay: 150ms;
+  }
+  .wave:nth-child(16) {
+    background: rgb(1, 255, 141);
+    animation-delay: 160ms;
+  }
+  .wave:nth-child(17) {
+    background: rgb(1, 255, 142);
+    animation-delay: 170ms;
+  }
+  .wave:nth-child(18) {
+    background: rgb(1, 255, 143);
+    animation-delay: 180ms;
+  }
+  .wave:nth-child(19) {
+    background: rgb(1, 255, 144);
+    animation-delay: 190ms;
+  }
+  .wave:nth-child(20) {
+    background: rgb(1, 255, 145);
+    animation-delay: 200ms;
+  }
+  .wave:nth-child(21) {
+    background: rgb(1, 255, 146);
+    animation-delay: 210ms;
+  }
+  .wave:nth-child(22) {
+    background: rgb(1, 255, 147);
+    animation-delay: 220ms;
+  }
+  .wave:nth-child(23) {
+    background: rgb(1, 255, 148);
+    animation-delay: 230ms;
+  }
+  .wave:nth-child(24) {
+    background: rgb(1, 255, 149);
+    animation-delay: 240ms;
+  }
+  .wave:nth-child(25) {
+    background: rgb(1, 255, 150);
+    animation-delay: 250ms;
+  }
+  .wave:nth-child(26) {
+    background: rgb(1, 255, 151);
+    animation-delay: 260ms;
+  }
+  .wave:nth-child(27) {
+    background: rgb(1, 255, 152);
+    animation-delay: 270ms;
+  }
+  .wave:nth-child(28) {
+    background: rgb(1, 255, 153);
+    animation-delay: 280ms;
+  }
+  .wave:nth-child(29) {
+    background: rgb(1, 255, 154);
+    animation-delay: 290ms;
+  }
+  .wave:nth-child(30) {
+    background: rgb(1, 255, 155);
+    animation-delay: 300ms;
+  }
+  .wave:nth-child(31) {
+    background: rgb(1, 255, 156);
+    animation-delay: 310ms;
+  }
+  .wave:nth-child(32) {
+    background: rgb(1, 255, 157);
+    animation-delay: 320ms;
+  }
+  .wave:nth-child(33) {
+    background: rgb(1, 255, 158);
+    animation-delay: 330ms;
+  }
+  .wave:nth-child(34) {
+    background: rgb(1, 255, 159);
+    animation-delay: 340ms;
+  }
+  .wave:nth-child(35) {
+    background: rgb(1, 255, 160);
+    animation-delay: 350ms;
+  }
+  .wave:nth-child(36) {
+    background: rgb(1, 255, 161);
+    animation-delay: 360ms;
+  }
+  .wave:nth-child(37) {
+    background: rgb(1, 255, 162);
+    animation-delay: 370ms;
+  }
+  .wave:nth-child(38) {
+    background: rgb(1, 255, 163);
+    animation-delay: 380ms;
+  }
+  .wave:nth-child(39) {
+    background: rgb(1, 255, 164);
+    animation-delay: 390ms;
+  }
+  .wave:nth-child(40) {
+    background: rgb(1, 255, 165);
+    animation-delay: 400ms;
+  }
+  .wave:nth-child(41) {
+    background: rgb(1, 255, 166);
+    animation-delay: 410ms;
+  }
+  .wave:nth-child(42) {
+    background: rgb(1, 255, 167);
+    animation-delay: 420ms;
+  }
+  .wave:nth-child(43) {
+    background: rgb(1, 255, 168);
+    animation-delay: 430ms;
+  }
+  .wave:nth-child(44) {
+    background: rgb(1, 255, 169);
+    animation-delay: 440ms;
+  }
+  .wave:nth-child(45) {
+    background: rgb(1, 255, 170);
+    animation-delay: 450ms;
+  }
+  .wave:nth-child(46) {
+    background: rgb(1, 255, 171);
+    animation-delay: 460ms;
+  }
+  .wave:nth-child(47) {
+    background: rgb(1, 255, 172);
+    animation-delay: 470ms;
+  }
+  .wave:nth-child(48) {
+    background: rgb(1, 255, 173);
+    animation-delay: 480ms;
+  }
+  .wave:nth-child(49) {
+    background: rgb(1, 255, 174);
+    animation-delay: 490ms;
+  }
+  .wave:nth-child(50) {
+    background: rgb(1, 255, 175);
+    animation-delay: 500ms;
+  }
+  .wave:nth-child(51) {
+    background: rgb(1, 255, 176);
+    animation-delay: 510ms;
+  }
+  .wave:nth-child(52) {
+    background: rgb(1, 255, 177);
+    animation-delay: 520ms;
+  }
+  .wave:nth-child(53) {
+    background: rgb(1, 255, 178);
+    animation-delay: 530ms;
+  }
+  .wave:nth-child(54) {
+    background: rgb(1, 255, 179);
+    animation-delay: 540ms;
+  }
+  .wave:nth-child(55) {
+    background: rgb(1, 255, 180);
+    animation-delay: 550ms;
+  }
+  .wave:nth-child(56) {
+    background: rgb(1, 255, 181);
+    animation-delay: 560ms;
+  }
+  .wave:nth-child(57) {
+    background: rgb(1, 255, 182);
+    animation-delay: 570ms;
+  }
+  .wave:nth-child(58) {
+    background: rgb(1, 255, 183);
+    animation-delay: 580ms;
+  }
+  .wave:nth-child(59) {
+    background: rgb(1, 255, 184);
+    animation-delay: 590ms;
+  }
+  .wave:nth-child(60) {
+    background: rgb(1, 255, 185);
+    animation-delay: 600ms;
+  }
+  .wave:nth-child(61) {
+    background: rgb(1, 255, 186);
+    animation-delay: 610ms;
+  }
+  .wave:nth-child(62) {
+    background: rgb(1, 255, 187);
+    animation-delay: 620ms;
+  }
+  .wave:nth-child(63) {
+    background: rgb(1, 255, 188);
+    animation-delay: 630ms;
+  }
+  .wave:nth-child(64) {
+    background: rgb(1, 255, 189);
+    animation-delay: 640ms;
+  }
+  .wave:nth-child(65) {
+    background: rgb(1, 255, 190);
+    animation-delay: 650ms;
+  }
+  .wave:nth-child(66) {
+    background: rgb(1, 255, 191);
+    animation-delay: 660ms;
+  }
+  .wave:nth-child(67) {
+    background: rgb(1, 255, 192);
+    animation-delay: 670ms;
+  }
+  .wave:nth-child(68) {
+    background: rgb(1, 255, 193);
+    animation-delay: 680ms;
+  }
+  .wave:nth-child(69) {
+    background: rgb(1, 255, 194);
+    animation-delay: 690ms;
+  }
+  .wave:nth-child(70) {
+    background: rgb(1, 255, 195);
+    animation-delay: 700ms;
+  }
+  .wave:nth-child(71) {
+    background: rgb(1, 255, 196);
+    animation-delay: 710ms;
+  }
+  .wave:nth-child(72) {
+    background: rgb(1, 255, 197);
+    animation-delay: 720ms;
+  }
+  .wave:nth-child(73) {
+    background: rgb(1, 255, 198);
+    animation-delay: 730ms;
+  }
+  .wave:nth-child(74) {
+    background: rgb(1, 255, 199);
+    animation-delay: 740ms;
+  }
+  .wave:nth-child(75) {
+    background: rgb(1, 255, 200);
+    animation-delay: 750ms;
+  }
+  .wave:nth-child(76) {
+    background: rgb(1, 255, 201);
+    animation-delay: 760ms;
+  }
+  .wave:nth-child(77) {
+    background: rgb(1, 255, 202);
+    animation-delay: 770ms;
+  }
+  .wave:nth-child(78) {
+    background: rgb(1, 255, 203);
+    animation-delay: 780ms;
+  }
+  .wave:nth-child(79) {
+    background: rgb(1, 255, 204);
+    animation-delay: 790ms;
+  }
+  .wave:nth-child(80) {
+    background: rgb(1, 255, 205);
+    animation-delay: 800ms;
+  }
+  .wave:nth-child(81) {
+    background: rgb(1, 255, 206);
+    animation-delay: 810ms;
+  }
+  .wave:nth-child(82) {
+    background: rgb(1, 255, 207);
+    animation-delay: 820ms;
+  }
+  .wave:nth-child(83) {
+    background: rgb(1, 255, 208);
+    animation-delay: 830ms;
+  }
+  .wave:nth-child(84) {
+    background: rgb(1, 255, 209);
+    animation-delay: 840ms;
+  }
+  .wave:nth-child(85) {
+    background: rgb(1, 255, 210);
+    animation-delay: 850ms;
+  }
+  .wave:nth-child(86) {
+    background: rgb(1, 255, 211);
+    animation-delay: 860ms;
+  }
+  .wave:nth-child(87) {
+    background: rgb(1, 255, 212);
+    animation-delay: 870ms;
+  }
+  .wave:nth-child(88) {
+    background: rgb(1, 255, 213);
+    animation-delay: 880ms;
+  }
+  .wave:nth-child(89) {
+    background: rgb(1, 255, 214);
+    animation-delay: 890ms;
+  }
+  .wave:nth-child(90) {
+    background: rgb(1, 255, 215);
+    animation-delay: 900ms;
+  }
+  .wave:nth-child(91) {
+    background: rgb(1, 255, 216);
+    animation-delay: 910ms;
+  }
+  .wave:nth-child(92) {
+    background: rgb(1, 255, 217);
+    animation-delay: 920ms;
+  }
+  .wave:nth-child(93) {
+    background: rgb(1, 255, 218);
+    animation-delay: 930ms;
+  }
+  .wave:nth-child(94) {
+    background: rgb(1, 255, 219);
+    animation-delay: 940ms;
+  }
+  .wave:nth-child(95) {
+    background: rgb(1, 255, 220);
+    animation-delay: 950ms;
+  }
+  .wave:nth-child(96) {
+    background: rgb(1, 255, 221);
+    animation-delay: 960ms;
+  }
+  .wave:nth-child(97) {
+    background: rgb(1, 255, 222);
+    animation-delay: 970ms;
+  }
+  .wave:nth-child(98) {
+    background: rgb(1, 255, 223);
+    animation-delay: 980ms;
+  }
+  .wave:nth-child(99) {
+    background: rgb(1, 255, 224);
+    animation-delay: 990ms;
+  }
+  .wave:nth-child(100) {
+    background: rgb(1, 255, 225);
+    animation-delay: 1000ms;
+  }
+  .wave:nth-child(101) {
+    background: rgb(1, 255, 226);
+    animation-delay: 1010ms;
+  }
+  .wave:nth-child(102) {
+    background: rgb(1, 255, 227);
+    animation-delay: 1020ms;
+  }
+  .wave:nth-child(103) {
+    background: rgb(1, 255, 228);
+    animation-delay: 1030ms;
+  }
+  .wave:nth-child(104) {
+    background: rgb(1, 255, 229);
+    animation-delay: 1040ms;
+  }
+  .wave:nth-child(105) {
+    background: rgb(1, 255, 230);
+    animation-delay: 1050ms;
+  }
+  .wave:nth-child(106) {
+    background: rgb(1, 255, 231);
+    animation-delay: 1060ms;
+  }
+  .wave:nth-child(107) {
+    background: rgb(1, 255, 232);
+    animation-delay: 1070ms;
+  }
+  .wave:nth-child(108) {
+    background: rgb(1, 255, 233);
+    animation-delay: 1080ms;
+  }
+  .wave:nth-child(109) {
+    background: rgb(1, 255, 234);
+    animation-delay: 1090ms;
+  }
+  .wave:nth-child(110) {
+    background: rgb(1, 255, 235);
+    animation-delay: 1100ms;
+  }
+  .wave:nth-child(111) {
+    background: rgb(1, 255, 236);
+    animation-delay: 1110ms;
+  }
+  .wave:nth-child(112) {
+    background: rgb(1, 255, 237);
+    animation-delay: 1120ms;
+  }
+  .wave:nth-child(113) {
+    background: rgb(1, 255, 238);
+    animation-delay: 1130ms;
+  }
+  .wave:nth-child(114) {
+    background: rgb(1, 255, 239);
+    animation-delay: 1140ms;
+  }
+  .wave:nth-child(115) {
+    background: rgb(1, 255, 240);
+    animation-delay: 1150ms;
+  }
+  .wave:nth-child(116) {
+    background: rgb(1, 255, 241);
+    animation-delay: 1160ms;
+  }
+  .wave:nth-child(117) {
+    background: rgb(1, 255, 242);
+    animation-delay: 1170ms;
+  }
+  .wave:nth-child(118) {
+    background: rgb(1, 255, 243);
+    animation-delay: 1180ms;
+  }
+  .wave:nth-child(119) {
+    background: rgb(1, 255, 244);
+    animation-delay: 1190ms;
+  }
+  .wave:nth-child(120) {
+    background: rgb(1, 255, 245);
+    animation-delay: 1200ms;
+  }
+  .wave:nth-child(121) {
+    background: rgb(1, 255, 246);
+    animation-delay: 1210ms;
+  }
+  .wave:nth-child(122) {
+    background: rgb(1, 255, 247);
+    animation-delay: 1220ms;
+  }
+  .wave:nth-child(123) {
+    background: rgb(1, 255, 248);
+    animation-delay: 1230ms;
+  }
+  .wave:nth-child(124) {
+    background: rgb(1, 255, 249);
+    animation-delay: 1240ms;
+  }
+  .wave:nth-child(125) {
+    background: rgb(1, 255, 250);
+    animation-delay: 1250ms;
+  }
+  .wave:nth-child(126) {
+    background: rgb(1, 255, 251);
+    animation-delay: 1260ms;
+  }
+  .wave:nth-child(127) {
+    background: rgb(1, 255, 252);
+    animation-delay: 1270ms;
+  }
+  .wave:nth-child(128) {
+    background: rgb(1, 255, 253);
+    animation-delay: 1280ms;
+  }
+  .wave:nth-child(129) {
+    background: rgb(1, 255, 254);
+    animation-delay: 1290ms;
+  }
+  .wave:nth-child(130) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1300ms;
+  }
+  .wave:nth-child(131) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1310ms;
+  }
+  .wave:nth-child(132) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1320ms;
+  }
+  .wave:nth-child(133) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1330ms;
+  }
+  .wave:nth-child(134) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1340ms;
+  }
+  .wave:nth-child(135) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1350ms;
+  }
+  .wave:nth-child(136) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1360ms;
+  }
+  .wave:nth-child(137) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1370ms;
+  }
+  .wave:nth-child(138) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1380ms;
+  }
+  .wave:nth-child(139) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1390ms;
+  }
+  .wave:nth-child(140) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1400ms;
+  }
+  .wave:nth-child(141) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1410ms;
+  }
+  .wave:nth-child(142) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1420ms;
+  }
+  .wave:nth-child(143) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1430ms;
+  }
+  .wave:nth-child(144) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1440ms;
+  }
+  .wave:nth-child(145) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1450ms;
+  }
+  .wave:nth-child(146) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1460ms;
+  }
+  .wave:nth-child(147) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1470ms;
+  }
+  .wave:nth-child(148) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1480ms;
+  }
+  .wave:nth-child(149) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1490ms;
+  }
+  .wave:nth-child(150) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1500ms;
+  }
+  .wave:nth-child(151) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1510ms;
+  }
+  .wave:nth-child(152) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1520ms;
+  }
+  .wave:nth-child(153) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1530ms;
+  }
+  .wave:nth-child(154) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1540ms;
+  }
+  .wave:nth-child(155) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1550ms;
+  }
+  .wave:nth-child(156) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1560ms;
+  }
+  .wave:nth-child(157) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1570ms;
+  }
+  .wave:nth-child(158) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1580ms;
+  }
+  .wave:nth-child(159) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1590ms;
+  }
+  .wave:nth-child(160) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1600ms;
+  }
+  .wave:nth-child(161) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1610ms;
+  }
+  .wave:nth-child(162) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1620ms;
+  }
+  .wave:nth-child(163) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1630ms;
+  }
+  .wave:nth-child(164) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1640ms;
+  }
+  .wave:nth-child(165) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1650ms;
+  }
+  .wave:nth-child(166) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1660ms;
+  }
+  .wave:nth-child(167) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1670ms;
+  }
+  .wave:nth-child(168) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1680ms;
+  }
+  .wave:nth-child(169) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1690ms;
+  }
+  .wave:nth-child(170) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1700ms;
+  }
+  .wave:nth-child(171) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1710ms;
+  }
+  .wave:nth-child(172) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1720ms;
+  }
+  .wave:nth-child(173) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1730ms;
+  }
+  .wave:nth-child(174) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1740ms;
+  }
+  .wave:nth-child(175) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1750ms;
+  }
+  .wave:nth-child(176) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1760ms;
+  }
+  .wave:nth-child(177) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1770ms;
+  }
+  .wave:nth-child(178) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1780ms;
+  }
+  .wave:nth-child(179) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1790ms;
+  }
+  .wave:nth-child(180) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1800ms;
+  }
+  .wave:nth-child(181) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1810ms;
+  }
+  .wave:nth-child(182) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1820ms;
+  }
+  .wave:nth-child(183) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1830ms;
+  }
+  .wave:nth-child(184) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1840ms;
+  }
+  .wave:nth-child(185) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1850ms;
+  }
+  .wave:nth-child(186) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1860ms;
+  }
+  .wave:nth-child(187) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1870ms;
+  }
+  .wave:nth-child(188) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1880ms;
+  }
+  .wave:nth-child(189) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1890ms;
+  }
+  .wave:nth-child(190) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1900ms;
+  }
+  .wave:nth-child(191) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1910ms;
+  }
+  .wave:nth-child(192) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1920ms;
+  }
+  .wave:nth-child(193) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1930ms;
+  }
+  .wave:nth-child(194) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1940ms;
+  }
+  .wave:nth-child(195) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1950ms;
+  }
+  .wave:nth-child(196) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1960ms;
+  }
+  .wave:nth-child(197) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1970ms;
+  }
+  .wave:nth-child(198) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1980ms;
+  }
+  .wave:nth-child(199) {
+    background: rgb(1, 255, 255);
+    animation-delay: 1990ms;
+  }
+  .wave:nth-child(200) {
+    background: rgb(1, 255, 255);
+    animation-delay: 2000ms;
+  }
+  
+  @keyframes wave {
+    50% {
+      transform: scaleY(0.16);
+    }
+  }
+  .container {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    bottom: 0; /* 固定在底部 */
+    width: 100%; /* 确保横跨全宽 */
+    font-size: 19px; 
+    text-align: center; 
+    color: #999;
+    width: 100vw;
+  }

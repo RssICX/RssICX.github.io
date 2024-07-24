@@ -1,0 +1,16 @@
+{
+  "name": "随机点名iAir",
+  "short_name": "iAir",
+  "start_url": "index.html",
+  "display": "standalone", 
+  "background_color": "#fdfdfd",
+  "theme_color": "#db4938",
+  "orientation": "landscape", 
+  "icons": [
+    {
+      "src": "image/maca.png",
+      "type": "image/png",
+      "sizes": "184x184"
+    }
+  ]
+}

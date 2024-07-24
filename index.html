@@ -14,10 +14,37 @@ a footer with links. -->
     <link rel="stylesheet" href="./styles/media.css">
     <link rel="icon" href="./images/maca.png">
     <link rel="stylesheet" href="./styles/window.css">
+    <link rel="stylesheet" href="./styles/fot.css">
     <script src="./JS/main.js"></script>
     <script type="text/javascript" src="./JS/current-device.min.js"></script>
+    <link rel="stylesheet" href="./styles/svg.css">
+    <link rel="manifest" href="manifest.json" />
+    <script src="./serviceWorker.js"></script>
+    <script src="./JS/app.js"></script>
 <body>
+    <div id="splashScreen" style="z-index: 9998;position: fixed; /* 或absolute，根据需要调整 */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    pointer-events: none;
+    ">
+        <svg viewBox="0 0 1200 600">
+            <text class="animated-text" x="50%" y="50%">随机点名 iAir</text>
+        </svg>
+    </div>
+
     <script>
+        const body = document.querySelector('body');
+        const animatedText = document.querySelector('.animated-text');
+        
+        animatedText.addEventListener('animationend', function() {
+            body.classList.add('animate-end'); // 动画结束后改变背景颜色
+        });
         var ie;
         //ie?
         if (!!window.ActiveXObject || "ActiveXObject" in window) {
@@ -30,25 +57,10 @@ a footer with links. -->
             window.location.href = "./ie.html";
             // document.getElementById("0").innerHTML="随机点名 iAir已不兼容IE";
         }
-        var audio = new Audio('./music/back.mp3');
-        var size = 0;
-        
-        audio.onloadedmetadata = function() {
-          size = audio.duration;
-          play_minuca(); // 第一次播放
-          window.setInterval(play_minuca, size * 1000 + 1000); // 设置定时器
-        };
-        
-        function play_minuca() {
-          audio.play(); // 播放
-        }
     </script>
     <!-- <header style="top : 0;text-align: center;">自2023/7/14 22:05起，随机点名 iAir不再兼容IE，您可以 升级浏览器 以继续访问，感谢您的支持，为您带来的不便请谅解</header> -->
     <!-- 上面的代码是生成随机名称的网页的 HTML 代码。它包括标题、段落元素、按钮以及一些用于输入和窗口显示的附加元素。该代码还包括用于格式化和定位页面上的元素的 CSS 样式。 -->
-    <h1>
-        <p id="pup" class="center big"
-            style="height: calc(21vh); font-size: 4rem; box-shadow: 0 0 0 0 rgba(0, 0, 0, .3);">随机点名 iAir</p>
-    </h1>
+    <div id="mainContent" style="z-index: 1000; position: relative;">
     <!-- <div id="0" style=""></div> -->
     <p id="0" class="pc u" style="font-size: 3rem; height: calc(20vh)">
         <strong>
@@ -56,17 +68,19 @@ a footer with links. -->
         </strong>
     </p>
     <!-- <div class="incorrect" style="size: 10ch;"></div> -->
-    <button style="display:block;margin:0 auto; width:150px; height:45px; font-size: larger;" class="btn1 btn d"
+    <button style="display:none;margin:0 auto; width:150px; height:45px; position:relative; z-index:9991;" class="btn1 btn"
         onclick="onc()" id="button">
         点击以开始
     </button>
     <div style="height: 1ch;"></div>
-
     <small>
         <a id="str" href="javascript:void(0)" onclick="showipyt();"
             style="height: 10px; color: #4a8fe3; background-color: inherit;" class="c-aaa">
         </a>
     </small>
+    
+</div>
+<div style="z-index: 10009;"><div id="shadow_down" class="shadow_css_ dong1_"></div>
     <div id="input_window" class="window_css_ dong0101">
         <div class="her" style="width: 1%;"></div>
         <div class="colll" style="text-align: right;" title="关闭" onclick="hideiput();"></div>
@@ -77,27 +91,15 @@ a footer with links. -->
             <input id="input" placeholder="输入框在这里哦૮꒰ ˶• ༝ •˶꒱ა" type="number">
             <button class="btn btn1" onclick="cin();">确定</button>
         </div>
-        
+
         <p id="ti" style="display: flex;justify-content: center; transform: translateX(0%) translateY(322%);"></p>
-        <P id="it" ></P>
+        <P id="it"></P>
     </div>
     <!-- <div class="set">设置
         <div></div>
     </div> -->
-    <div id="shadow_down" class="shadow_css_ dong1_"></div>
-    <p class="footer center" style="font-size: 19px; margin-top: 60px; text-align: center; color: #999;">
-        © 2023~2024
-        <strong class="a">
-            高浩朗
-        </strong>
-        |
-        <a class="a" href="javascript:void(0)" onclick="displayWindow()">关于</a>
-    </p>
-    <div style="display: flex;justify-content: space-around; transform: translateY(calc(29vh))">
-        <a href="./index-time.html" id="timeday" style="color: #999;text-decoration: none;display: flex;"></a>
-        <a href="./index-time.html" id="time" style="color: #999;text-decoration: none;display: flex;"></a>
-    </div>
     <!--悬浮窗口-->
+    <!-- <img src="./图片1.png" alt="" srcset=""> -->
     <about id="window" class="window_css dong">
         <div class="her" style="width: 1%;"></div>
         <div class="colll" style="text-align: right;" title="关闭" onclick="hideWindow()"></div>
@@ -109,24 +111,54 @@ a footer with links. -->
             <div>这是一个可以“增进”师生关系的程序！</div>
             <!-- <div>还有，作者是男生哦~<br><del><small style="font-size: 10%;">（虽然看起来有点可爱）</small></del></div> -->
             <div>还有最重要的<br>未经作者允许，不可以二次制作哦~ <br>
-                <div>本项目使用<a class="a12" href="https://github.com/matthewhudson/current-device">current-device</a>库</div>
+                <div>本项目使用<a class="a12" href="https://github.com/matthewhudson/current-device">current-device</a>库
+                </div>
             </div>
         </div>
     </about>
     <!--出现悬浮窗口后,背景变暗-->
-    <div id="shadow" class="shadow_css dong1"></div>
+    <div id="shadow" class="shadow_css dong1"></div></div>
     <script>
         _0er();
         function _0er() {
-            if (aup_math == "") {
-                document.getElementById("0").innerHTML = (" " + " 你还没有设置随机点名人数哦~程序也不知道要怎么输出了呐~");
-                document.getElementById("str").innerHTML = ("设置点名人数");
-            }
-            else {
-                window.onload = document.getElementById("str").innerHTML = "需要点名的人数不是" + aup_m() + "？点我输入";
-            }
+            
+            document.querySelector('.animated-text').addEventListener('animationend', function() {
+    // 添加一个新的CSS类来触发动画
+    document.getElementById('mainContent').classList.add('fadeIn');
+    document.getElementById('button').style.display = 'block'; 
+    if (aup_math == "") {
+    // 给提示信息元素添加动画类
+    document.getElementById("0").innerHTML = " 你还没有设置随机点名人数哦~程序也不知道要怎么输出了呐~";
+    document.getElementById("0").classList.add('fadeInMessage');
+
+    // 给按钮添加动画类
+    document.getElementById("str").innerHTML = "设置点名人数";
+    document.getElementById("str").classList.add('fadeInButton');
+} else {
+    // 当aup_math不为空时，改变按钮文本并添加动画
+    document.getElementById("str").innerHTML = "需要点名的人数不是" + aup_m() + "？点我输入";
+    document.getElementById("str").classList.add('fadeInButton');
+}
+});
         }
     </script>
+    
+    </div>
+    <p class="center" style="position: fixed; /* 添加固定定位 */
+    bottom: 0; /* 固定在底部 */
+    width: 100%; /* 确保横跨全宽 */
+    font-size: 19px; 
+    text-align: center; 
+    color: #999;
+    left: 0;">
+        © 2023~2024
+        <strong class="a">
+            高浩朗
+        </strong>
+        |
+        <a class="a" href="javascript:void(0)" onclick="displayWindow()">关于</a>
+    </p>
+    
 </body>
 
 </html>

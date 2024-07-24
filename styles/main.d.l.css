@@ -39,16 +39,6 @@
     font-size: 36px;
 }
 
-.footer {
-    position: fixed;
-    left: 0px;
-    bottom: 0px;
-    width: 100%;
-    height: 50px;
-    background-color: initial;
-    z-index: 9999;
-}
-
 
 /* `@media (prefers-color-scheme: dark) {`
 是一个媒体查询，针对偏好深色配色方案的设备或浏览器。它允许您定义当用户的设备或浏览器设置为深色配色方案时将应用的特定样式。在本例中，它将正文的背景颜色设置为#333，段落和标题的文本颜色设置为白色，并对按钮和窗口应用不同的样式。 */
@@ -85,4 +75,17 @@
 {
     display: fixed;
     justify-content: end;
+}
+body, html {
+    margin: 0; /* 移除默认边距 */
+    padding: 0; /* 移除默认内边距 */
+    width: 100%; /* 宽度100% */
+    height: 100%; /* 高度100% */
+    overflow-x: hidden; /* 隐藏水平滚动条 */
+    overflow-y: auto; /* 当内容溢出时自动显示垂直滚动条 */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    filter: url(#goo);
+    background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%);
 }
