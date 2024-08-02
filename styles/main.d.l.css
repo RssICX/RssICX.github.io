@@ -87,5 +87,29 @@ body, html {
     justify-content: flex-start;
     align-items: flex-end;
     filter: url(#goo);
-    background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%);
+    /* display: none; */
+    /* background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%); */
+    
+}
+.bodd{
+    background-color: transparent;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    box-shadow:
+    inset 0 0 53px 9px rgb(0 0 0 / 22%), inset 0 0 63px 64px rgba(0, 0, 0, -0.984), inset 0 0 55px 37px rgb(234 234 234 / 45%);
+    margin: 0; /* 移除默认边距 */
+    padding: 0; /* 移除默认内边距 */
+    width: 100%; /* 宽度100% */
+    height: 100%; /* 高度100% */
+    overflow-x: hidden; /* 隐藏水平滚动条 */
+    overflow-y: auto; /* 当内容溢出时自动显示垂直滚动条 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10001;
+}
+.bodd.show {
+    opacity: 1; /* 显示时变为完全不透明 */
+    pointer-events: none; /* 允许元素响应鼠标事件，仅当需要时取消此行注释 */
 }

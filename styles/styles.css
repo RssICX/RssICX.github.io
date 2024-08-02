@@ -1,0 +1,59 @@
+.prompt-card {
+    position: fixed;
+    bottom: 20px;
+    left: -100%;
+    width: 90%;
+    max-height: 50px;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 60px;
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 80px rgba(0, 0, 0, 0.5), 0 1px 40px rgba(0, 0, 0, 0.16);
+    /* ...（原有样式保持不变）... */
+    display: flex;
+    /* 添加这一行以启用Flex布局 */
+    /* 在图片和文本之间添加间隔，可根据需要调整 */
+    /* display: flex; 启用Flex布局 */
+    flex-direction: column; /* 首先尝试列布局，以排查问题 */
+}
+.prompt-content-wrap {
+    display: flex;
+    flex-direction: row; /* 设置为行布局 */
+    align-items: center; /* 垂直居中 */
+    gap: 10px; /* 文本与图片间的间距 */
+}
+/* 在图片和文本之间添加间隔，可根据需要调整 */
+/* 动画进入 */
+.prompt-enter {
+    left: 1%;
+    opacity: 1;
+}
+
+/* 动画离开 */
+.prompt-exit {
+    left: -100%;
+    opacity: 0;
+}
+
+.prompt-card img {
+    width: 10%; /* 调整图片宽度以适应内容区 */
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.slide-up {
+    transform: translateY(10%); /* 将元素向下移动其自身高度的距离 */
+    transition: transform 0.5s ease-out; 
+    pointer-events: none;
+}
+.slide-down {
+    transform: translateY(-10%); /* 将元素向下移动其自身高度的距离 */
+    transition: transform 0.5s ease-out; 
+    pointer-events: none;
+}

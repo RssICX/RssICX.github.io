@@ -1,112 +1,87 @@
-// 获取文档的 cookie 信息
-var cookie1 = document.cookie;
-// 将 cookie 中的数字提取出来
-var num2 = cookie1.replace(/[^\d]/g, " ");
-// 定义变量和数组
-var random, aup, aup_history = [0, 0, 0, 0, 0, 0, 0], aup2, aup_math = num2, aup_h = [0, 0, 0, 0];
-// 生成指定范围内的随机数的 JavaScript 函数
-function randomNum(minNum, maxNum) {
-    switch (arguments.length) {
-        case 1:
-            return parseInt(Math.random() * minNum + 1, 10);
-            break;
-        case 2:
-            return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
-            break;
-        default:
-            return 0;
-            break;
+
+const num2 = document.cookie.replace(/[^\d]/g, "");
+let aup_math = Number(num2);
+const COOKIE_NAME = "cookie1";
+const MAX_DELAY = 200;
+var STUDENT_COUNT = aup_math;
+const AUP_ELEMENT_ID = "0";
+const TI_ELEMENT_ID = "ti";
+let usedNumbers = []; // 用来存储已生成的随机数
+// 从cookie获取学生总数
+// 生成随机数的简化函数
+function generateUniqueRandom(min,max) {
+    if (usedNumbers.length >= max - min + 1) {
+        console.warn("所有可能的数都已被使用，无法再生成不重复的随机数。");
+        document.getElementById(AUP_ELEMENT_ID).innerHTML = "所有可能的数都已被使用，无法再生成不重复的随机数，请点击下方按钮重置。";
+        document.getElementById("button").innerHTML = "重置";
+        document.getElementById("button").onclick = resetUsedNumbers; // 直接赋值函数引用
+        return;
     }
+    let randomNumber;
+    do {
+        randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+    } while (usedNumbers.includes(randomNumber));
+
+    usedNumbers.push(randomNumber);
+    return randomNumber;
+}
+function resetUsedNumbers() {
+    usedNumbers = []; // 清空数组，使其准备好存储新的一系列随机数
+    alert("已完成重置");
+    document.getElementById("button").innerHTML = "点击以开始";
+    document.getElementById("button").onclick = announceStudent; // 重新绑定点击事件到announceStudent函数
+}
+// 显示点名信息
+function announceStudent() {
+    console.log(document.getElementById('0'))
+    const id_0Element = document.getElementById(AUP_ELEMENT_ID);
+    id_0Element.innerHTML = "请学号为 "+ generateUniqueRandom(1,aup_math) + " 号的同学起立";
+    id_0Element.style.display = "block";
+    id_0Element.className = "center u";
 }
 
-// 初始化变量
-var i = 0, u = 0, tyu = 0;
-var id_0 = document.getElementById("0");
 
-// 在页面上显示学号
-function cout() {
-    for (let index = 0; index <= 10000; index++) {
-        aup_history[index] = randomNum(1, aup_math);
+// var count=0;
+
+function validateInput(count) {
+    var count1 =count;
+    var hhhhh = document.getElementById("ti");
+    if (count1 == 1) {
+        hhhhh.innerText = ("不可以输入0哦~");
     }
-    u = aup_history[randomNum(0, 10000)];
-    aup = "请学号为" + ' ' + u + '\u0020' + "号的同学起立";
-   document.getElementById("0").innerHTML = aup;
-}
-
-// 显示学号悬浮窗口
-function myse() {
-    document.getElementById("0").style.display = "block";
-}
-
-// 隐藏学号悬浮窗口
-function for_() {
-    cout();
-    document.getElementById("0").style.display = "none";
-    document.getElementById("0").setAttribute("class", "center u");
-    myse();
-}
-var delay=100;
-// 占位函数
-function onc() {
-    let delay = 1;
-    const maxDelay = 200;
-
-    function intervalFunction() {
-        delay = delay + 1;
-        console.log(delay);
-        if (delay >= maxDelay) {
-            clearInterval(intervalId); // 停止循环
-        }
-        cout(); // 在每个间隔调用 cout
+    else if (count1 == 2) {
+        hhhhh.innerText = ("都说了不可以输入0了，讨厌~");
     }
-
-    const intervalId = setInterval(intervalFunction, delay);
-} // 调用函数开始进程
-function wew(params) {
+    else if (count1 == 3) {
+        hhhhh.innerText = ("哼，你又输入0，不要改了！");
+        cou=0;
+    }
     
 }
-// 计数器函数，用于限制输入
-var cou = 0, Math0;
+// 初始化调用或其他逻辑
+// ...
 
-// 处理不能输入 0 的情况
-function name(count) {
-    var hhhhh = document.getElementById("ti");
-    if (count == 1) {
-        hhhhh.innerText = ("不可以输入0哦~");
-        return false;
-    }
-    else if (count == 2) {
-        hhhhh.innerText = ("都说了不能输入0了，还输入，讨厌~");
-        return false;
-    }
-    else if (count == 3) {
-        hhhhh.innerText = ("哼，你又输入0，不要改了！");
-        cou = 0;
-        return false;
-    }
-}
 
 // 处理不能输入负数的情况
 function cou2(count) {
+    var count1 =count;
     var hhhhh = document.getElementById("ti");
-    if (count == 1) {
+    if (count1 == 1) {
         hhhhh.innerText = ("不可以输入负数哦~");
-        return false;
     }
-    else if (count == 2) {
+    else if (count1 == 2) {
         hhhhh.innerText = ("都说了不可以输入负数了，讨厌~");
-        return false;
     }
-    else if (count == 3) {
+    else if (count1 == 3) {
         hhhhh.innerText = ("哼，你又输入负数，不要改了！");
-        cou = 0;
-        return false;
+        npoi=0;
     }
+    
 }
 
 // 隐藏输入窗口
 function hideiput0() {}
-
+let cou=0; 
 // 处理用户输入
 let npoi=0;
 function cin() {
@@ -114,7 +89,7 @@ function cin() {
     bian = document.getElementById("input").value;
     if (bian == 0 && bian != "") {
         cou++;
-        name(cou);
+        validateInput(cou);
     }
     else if (bian<0) {
         npoi++;
