@@ -21,7 +21,12 @@ a footer with links. -->
     <link rel="manifest" href="manifest.json" />
     <script src="./serviceWorker.js"></script>
     <script src="./JS/app.js"></script>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<div class="bodd"></div>
+
 <body>
+
     <div id="splashScreen" style="z-index: 9998;position: fixed; /* 或absolute，根据需要调整 */
     top: 0;
     left: 0;
@@ -37,12 +42,21 @@ a footer with links. -->
             <text class="animated-text" x="50%" y="50%">随机点名 iAir</text>
         </svg>
     </div>
-
+    <div id="pwaPrompt" class="prompt-card">
+            <div class="prompt-content-wrap">
+                <img src="./images/pwa.svg">
+                <p>随机点名 iAir 使用PWA技术</p>
+                <br>
+                <small>您可以离线访问</small>
+            </div>
+            
+    </div>
+    
     <script>
         const body = document.querySelector('body');
         const animatedText = document.querySelector('.animated-text');
-        
-        animatedText.addEventListener('animationend', function() {
+
+        animatedText.addEventListener('animationend', function () {
             body.classList.add('animate-end'); // 动画结束后改变背景颜色
         });
         var ie;
@@ -61,88 +75,117 @@ a footer with links. -->
     <!-- <header style="top : 0;text-align: center;">自2023/7/14 22:05起，随机点名 iAir不再兼容IE，您可以 升级浏览器 以继续访问，感谢您的支持，为您带来的不便请谅解</header> -->
     <!-- 上面的代码是生成随机名称的网页的 HTML 代码。它包括标题、段落元素、按钮以及一些用于输入和窗口显示的附加元素。该代码还包括用于格式化和定位页面上的元素的 CSS 样式。 -->
     <div id="mainContent" style="z-index: 1000; position: relative;">
-    <!-- <div id="0" style=""></div> -->
-    <p id="0" class="pc u" style="font-size: 3rem; height: calc(20vh)">
-        <strong>
+        <!-- <div id="0" style=""></div> -->
+        <p id="0" class="pc u" style="font-size: 3rem; height: calc(20vh)">
+            <strong>
 
-        </strong>
-    </p>
-    <!-- <div class="incorrect" style="size: 10ch;"></div> -->
-    <button style="display:none;margin:0 auto; width:150px; height:45px; position:relative; z-index:9991;" class="btn1 btn"
-        onclick="onc()" id="button">
-        点击以开始
-    </button>
-    <div style="height: 1ch;"></div>
-    <small>
-        <a id="str" href="javascript:void(0)" onclick="showipyt();"
-            style="height: 10px; color: #4a8fe3; background-color: inherit;" class="c-aaa">
-        </a>
-    </small>
-    
-</div>
-<div style="z-index: 10009;">
-    <div id="input_window" class="window_css_ dong0101" style=" box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5), 0 1px 20px rgba(0, 0, 0, 0.06);">
-        <div class="her" style="width: 1%;"></div>
-        <div class="colll" style="text-align: right;" title="关闭" onclick="hideiput();"></div>
-        <div class="center" style="transform: translateY(80%) translateX(6%); font-size: 15px; color: #333;">
-            <strong>你想为多少人点名呢？ヾ(^▽^*)))</strong>
-        </div>
-        <div style="display: flex;justify-content: center;transform: translateX(0%) translateY(147%);">
-            <input id="input" placeholder="输入框在这里哦૮꒰ ˶• ༝ •˶꒱ა" type="number">
-            <button class="btn btn1" onclick="cin();">确定</button>
-        </div>
+            </strong>
+        </p>
+        <!-- <div class="incorrect" style="size: 10ch;"></div> -->
+        <button style="display:none;margin:0 auto; width:150px; height:45px; position:relative; z-index:9991; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.404), 0 1px 20px rgba(0, 0, 0, 0.158);
+    border-radius: 6px;" class="btn1 btn" onclick="announceStudent()" id="button">
+            点击以开始
+        </button>
+        <div style="height: 1ch;"></div>
+        <small>
+            <a id="str" href="javascript:void(0)" onclick="showipyt();"
+                style="height: 10px; color: #4a8fe3; background-color: inherit;" class="c-aaa">
+            </a>
+        </small>
 
-        <p id="ti" style="display: flex;justify-content: center; transform: translateX(0%) translateY(322%);"></p>
-        <P id="it"></P>
     </div>
-    <!-- <div class="set">设置
+    <div style="z-index: 10009;">
+        <div id="input_window" class="window_css_ dong0101"
+            style=" box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5), 0 1px 20px rgba(0, 0, 0, 0.06);">
+            <div class="her" style="width: 1%;"></div>
+            <div class="colll" style="text-align: right;" title="关闭" onclick="hideiput();"></div>
+            <div class="center" style="transform: translateY(80%) translateX(6%); font-size: 15px; color: #333;">
+                <strong>你想为多少人点名呢？ヾ(^▽^*)))</strong>
+            </div>
+            <div style="display: flex;justify-content: center;transform: translateX(0%) translateY(147%);">
+                <input id="input" placeholder="输入框在这里哦૮꒰ ˶• ༝ •˶꒱ა" type="number">
+                <button class="btn btn1" onclick="cin();">确定</button>
+            </div>
+
+            <p id="ti" style="display: flex;justify-content: center; transform: translateX(0%) translateY(322%);"></p>
+        </div>
+        <!-- <div class="set">设置
         <div></div>
     </div> -->
-    <!--悬浮窗口-->
-    <!-- <img src="./图片1.png" alt="" srcset=""> -->
-    <about id="window" class="window_css dong" style="box-shadow: 0 4px 80px rgba(0, 0, 0, 0.5), 0 1px 40px rgba(0, 0, 0, 0.16);">
-        <div class="her" style="width: 1%;"></div>
-        <div class="colll" style="text-align: right;" title="关闭" onclick="hideWindow()"></div>
-        <div class="center" style="transform: translateY(60%); font-size: 28px; color: #333;">
-            <strong>关于 随机点名 iAir</strong>
-        </div>
-        <div style="height: 23%;"></div>
-        <div class="center" style="font-size: 22px;">
-            <div>这是一个可以“增进”师生关系的程序！</div>
-            <!-- <div>还有，作者是男生哦~<br><del><small style="font-size: 10%;">（虽然看起来有点可爱）</small></del></div> -->
-            <div>还有最重要的<br>未经作者允许，不可以二次制作哦~ <br>
-                <div>本项目使用<a class="a12" href="https://github.com/matthewhudson/current-device">current-device</a>库
+        <!--悬浮窗口-->
+        <!-- <img src="./图片1.png" alt="" srcset=""> -->
+        <about id="window" class="window_css dong"
+            style="box-shadow: 0 4px 80px rgba(0, 0, 0, 0.5), 0 1px 40px rgba(0, 0, 0, 0.16);">
+            <div class="her" style="width: 1%;"></div>
+            <div class="colll" style="text-align: right;" title="关闭" onclick="hideWindow()"></div>
+            <div class="center" style="transform: translateY(60%); font-size: 28px; color: #333;">
+                <strong>关于 随机点名 iAir</strong>
+            </div>
+            <div style="height: 23%;"></div>
+            <div class="center" style="font-size: 22px;">
+                <div>这是一个可以“增进”师生关系的程序！</div>
+                <!-- <div>还有，作者是男生哦~<br><del><small style="font-size: 10%;">（虽然看起来有点可爱）</small></del></div> -->
+                <div>还有最重要的<br>未经作者允许，不可以二次制作哦~ <br>
+                    <div>本项目使用<a class="a12" href="https://github.com/matthewhudson/current-device">current-device</a>库
+                    </div>
                 </div>
             </div>
-        </div>
-    </about>
-    <!--出现悬浮窗口后,背景变暗-->
+        </about>
+        <!--出现悬浮窗口后,背景变暗-->
 
-    <script>
-        _0er();
-        function _0er() {
-            
-            document.querySelector('.animated-text').addEventListener('animationend', function() {
-    // 添加一个新的CSS类来触发动画
-    document.getElementById('mainContent').classList.add('fadeIn');
-    document.getElementById('button').style.display = 'block'; 
-    if (aup_math == "") {
-    // 给提示信息元素添加动画类
-    document.getElementById("0").innerHTML = " 你还没有设置随机点名人数哦~程序也不知道要怎么输出了呐~";
-    document.getElementById("0").classList.add('fadeInMessage');
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const pwaPrompt = document.getElementById('pwaPrompt');
 
-    // 给按钮添加动画类
-    document.getElementById("str").innerHTML = "设置点名人数";
-    document.getElementById("str").classList.add('fadeInButton');
-} else {
-    // 当aup_math不为空时，改变按钮文本并添加动画
-    document.getElementById("str").innerHTML = "需要点名的人数不是" + aup_m() + "？点我输入";
-    document.getElementById("str").classList.add('fadeInButton');
-}
-});
-        }
-    </script>
-    
+                // 在页面加载5秒后显示提示卡片
+                setTimeout(() => {
+                    pwaPrompt.classList.add('prompt-enter');
+                    pwaPrompt.style.display = 'block'; // 确保显示元素
+                }, 4000);
+
+                // 2秒后隐藏提示卡片
+                setTimeout(() => {
+                    pwaPrompt.classList.remove('prompt-enter');
+                    pwaPrompt.classList.add('prompt-exit');
+                    setTimeout(() => {
+                        pwaPrompt.style.display = 'none'; // 隐藏元素
+                    }, 400); // 等待动画完成后再隐藏
+                }, 10000);
+            });
+            document.addEventListener("DOMContentLoaded", function () {
+                setTimeout(function () {
+                    var element = document.querySelector(".bodd");
+                    element.classList.add("show"); // 添加类来触发动画
+                }, 2400); 
+            });
+            _0er();
+            function _0er() {
+
+                document.querySelector('.animated-text').addEventListener('animationend', function () {
+                    // 添加一个新的CSS类来触发动画
+                    document.getElementById('mainContent').classList.add('fadeIn');
+                    document.getElementById('button').style.display = 'block';
+                    if (aup_math == "") {
+                        // 给提示信息元素添加动画类
+                        document.getElementById("0").innerHTML = " 你还没有设置随机点名人数哦~程序也不知道要怎么输出了呐~";
+
+                        // 给按钮添加动画类
+                        document.getElementById("str").innerHTML = "设置点名人数";
+                    } else {
+                        // 当aup_math不为空时，改变按钮文本并添加动画
+                        document.getElementById("str").innerHTML = "需要点名的人数不是" + aup_m() + "？点我输入";
+                    }
+                });
+            }
+            document.addEventListener("DOMContentLoaded", function () {
+                document.getElementById('pwaPrompt').addEventListener('click', function() {
+                window.location.href = "https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps";
+        }); 
+            });
+            // <script>
+        
+        </script>
+
     </div>
     <p class="center" style="position: fixed; /* 添加固定定位 */
     bottom: 0; /* 固定在底部 */
@@ -158,7 +201,7 @@ a footer with links. -->
         |
         <a class="a" href="javascript:void(0)" onclick="displayWindow()">关于</a>
     </p>
-    
+
 </body>
 
 </html>

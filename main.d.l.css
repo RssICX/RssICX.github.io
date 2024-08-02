@@ -1,0 +1,115 @@
+/* 上面的代码是一个CSS样式表。它为网页上的不同元素定义了各种样式。以下是代码所做的摘要： */
+@charset "utf-8";
+
+/* `@font-face`
+规则用于定义网页的自定义字体。在本例中，它定义了一个名为“PingFangSC-Light”的字体系列并指定了字体文件的来源。字体文件位于“./Font-Faiml/HarmonyOS_Sans_SC_Light.ttf”，格式为TrueType。 */
+@font-face {
+    font-family: "PingFangSC-Light";
+    src: url("./Font-Faiml/HarmonyOS_Sans_SC_Light.ttf") format('truetype');
+}
+
+/* 代码“#grad1”针对 ID 为“grad1”的元素并向其应用背景渐变。渐变从底部开始，从红色到 #fd8403 再到黄色。 */
+.big {
+    font-size: 50px;
+}
+
+* {
+    font-family: "PingFangSC-Light";
+}
+
+.center {
+    ine-height: 200px;
+
+    text-align: center;
+
+    /* height: 200px; */
+    /* font-family: "PingFang SC";
+ */
+    /* font-family: PingFangSC-Regular, sans-serif; */
+    font-size: 36px;
+}
+
+.pc {
+    ine-height: 200px;
+
+    text-align: center;
+
+    /* height: 200px; */
+
+    font-size: 36px;
+}
+
+
+/* `@media (prefers-color-scheme: dark) {`
+是一个媒体查询，针对偏好深色配色方案的设备或浏览器。它允许您定义当用户的设备或浏览器设置为深色配色方案时将应用的特定样式。在本例中，它将正文的背景颜色设置为#333，段落和标题的文本颜色设置为白色，并对按钮和窗口应用不同的样式。 */
+/* “@media (prefers-color-scheme: dark)”规则是一种媒体查询，针对偏好深色配色方案的设备或浏览器。它允许您定义当用户的设备或浏览器设置为深色配色方案时将应用的特定样式。 */
+
+.a {
+    color: inherit;
+    text-decoration: none;
+    transition: .25s;
+}
+
+.a :hover {
+    /* color: inherit;
+    text-decoration: none; */
+    color: rgb(206, 227, 239);
+}
+.a12 {
+    color: rgb(101, 225, 136);
+    text-decoration: none;
+    transition: .25s;
+}
+
+.a12 :hover {
+    /* color: inherit;
+    text-decoration: none; */
+    color: rgb(0, 140, 186);
+}
+.top
+{
+    position: fixed;
+    top: 20%;
+}
+.set
+{
+    display: fixed;
+    justify-content: end;
+}
+body, html {
+    margin: 0; /* 移除默认边距 */
+    padding: 0; /* 移除默认内边距 */
+    width: 100%; /* 宽度100% */
+    height: 100%; /* 高度100% */
+    overflow-x: hidden; /* 隐藏水平滚动条 */
+    overflow-y: auto; /* 当内容溢出时自动显示垂直滚动条 */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    filter: url(#goo);
+    /* display: none; */
+    /* background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%); */
+    
+}
+.bodd{
+    background-color: transparent;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    box-shadow:
+    inset 0 0 53px 9px rgb(0 0 0 / 22%), inset 0 0 63px 64px rgba(0, 0, 0, -0.984), inset 0 0 55px 37px rgb(234 234 234 / 45%);
+    margin: 0; /* 移除默认边距 */
+    padding: 0; /* 移除默认内边距 */
+    width: 100%; /* 宽度100% */
+    height: 100%; /* 高度100% */
+    overflow-x: hidden; /* 隐藏水平滚动条 */
+    overflow-y: auto; /* 当内容溢出时自动显示垂直滚动条 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10001;
+}
+.bodd.show {
+    opacity: 1; /* 显示时变为完全不透明 */
+    pointer-events: none; /* 允许元素响应鼠标事件，仅当需要时取消此行注释 */
+}

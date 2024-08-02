@@ -1,0 +1,109 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    transition: background-color 3s ease;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    max-height: 70%;
+    transform: translateY(-5%);
+    z-index: -1;
+}
+@keyframes fade {
+    0% { /* 开始和结束时完全不透明 */
+      opacity: 1;
+    }
+    50% { /* 中间点变为半透明 */
+      opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+  }
+  
+  /* 应用动画到黑色图形div */
+  .fullscreen-black {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    z-index: 9999;
+    animation: fade 5s infinite; /* 动画名称、持续时间和循环次数 */
+    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); /* 非线性缓动效果 */
+  }
+.animated-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 150px;
+    dominant-baseline: middle;
+    text-anchor: middle;
+    stroke: rgba(54, 95, 160, 1);
+    stroke-width: 0.8;
+    fill: rgba(72, 138, 20, 0);
+    opacity: 0;
+    animation:
+      appear 1s ease-in forwards,
+      draw 3s forwards,
+      moveUpAndTransform 3s ease-out forwards;
+}
+
+@keyframes appear {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px); /* 可选：添加一些额外的移动效果以增强动画 */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeIn1 {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fadeInMessage {
+    animation-name: fadeIn1;
+    animation-duration: 1s;
+    visibility: visible;
+    animation-fill-mode: forwards;
+}
+
+.fadeInButton {
+    animation-name: fadeIn1;
+    animation-duration: 0.5s; /* 示例：不同的动画时长 */
+    visibility: visible;
+    animation-fill-mode: forwards;
+}
+#mainContent.fadeIn {
+    visibility: visible; /* 确保元素可见 */
+    animation-name: fadeIn;
+    animation-duration: 1.6s; /* 动画持续时间 */
+    animation-fill-mode: forwards; /* 保持动画结束状态 */
+}
+@keyframes draw {
+    0% {stroke-dashoffset: 1000;}
+    100% {stroke-dashoffset: 0;}
+}
+
+@keyframes moveUpAndTransform {
+    0% {transform: translateY(0); font-size: 150px; fill: rgb(59, 133, 207);}
+    50% {transform: translateY(-30%); font-size: calc(calc(15vh) * 0.8); fill: rgb(57, 115, 173);} /* 调整移动距离和字体大小 */
+    100% {transform: translateY(-40%); font-size: calc(calc(10.5vh) * 0.5); fill: #000;} /* 确保文字保持可见 */
+}
+
+/* 动画结束后改变背景颜色 */
+.animate-end {
+    background-color: #fff;
+}

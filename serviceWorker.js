@@ -11,7 +11,9 @@ const assets = [
     '/styles/main.d.l.css',
     '/styles/media.css',
     '/styles/svg.css',
-    '/styles/window.css'
+    '/styles/window.css',
+    '/404.html',
+    
 ];
 self.addEventListener('fetch', (fetchEvent) => {
     fetchEvent.respondWith(
